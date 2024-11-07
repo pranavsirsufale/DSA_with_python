@@ -47,14 +47,24 @@ class MeraList:
             return 'IndexError - Index out of range'
 
     
+
+
+
+
     def append(self,item):
         if self.n == self.size: # need to resize
             # resize 
             self.__resize(self.size *2 )
-    
         # append
         self.A[self.n] = item
         self.n += 1
+
+
+    def pop(self):
+        self.n -= 1
+
+
+
 
     def __resize(self,new_capacity):
         # create a new array with new capacity
