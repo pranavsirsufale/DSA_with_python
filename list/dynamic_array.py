@@ -61,7 +61,55 @@ class MeraList:
 
 
     def pop(self):
+        if self.n == 0:
+            return "Empty List"
+        print(self.A[self.n-1])
         self.n -= 1
+
+    
+    
+    
+    
+
+
+    def clear(self):
+        self.n = 0
+        self.size = 1
+
+
+    def find(self,item):
+        for i in range(self.n):
+            if self.A[i] == item : 
+                return i
+        return 'ValueError - not in list'
+    
+
+
+    def __delitem__(self,index):
+        if index >= self.n or index < 0 :
+            return 'IndexError - not vlaid index'
+        # delte from the position
+        for i in range(index,self.n-1):
+            self.A[i] = self.A[i+1]     
+        self.n -= 1
+
+    def insert(self,index,item):
+        if self.size == self.n :
+            self.__resize(self.size * 2)
+
+        for i in range(self.n, index,-1):
+            self.A[i] = self.A[i-1] 
+        self.A[index] = item
+        self.n += 1
+
+    def remove(self,item):
+        for i in range(self.n-1):
+            if self.A[i] == item:
+                self.__delitem__(i)
+                return
+        return "ValueError - item not found "
+
+        
 
 
 
@@ -81,15 +129,26 @@ class MeraList:
         return (capacity*ctypes.py_object)()
 
 L = MeraList()
-L.append('Pooja maz pillu')
+L.append('Pranav')
 L.append(3.4)
 L.append(True)
 L.append(100)
+L.append('infinite')
+L.append('infinity')
 
 print("length of L : " , len(L))
 
 print(L)
-print(L[0])
+# print(L[0])
+# L.pop()
+L.insert(2,'pooja')
+# print(L.find('Pranav')) # found in position index 0
+print(L)
+print(L.__delitem__(500))
+print(L)
+print(L.remove('infinite'))
+print(L.remove('infinite'))
+print(L)
 
 
 
