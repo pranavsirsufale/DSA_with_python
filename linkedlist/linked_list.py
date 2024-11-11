@@ -76,11 +76,21 @@ class LinkedList:
             curr = curr.next
         # case 1 break -> item apko mil gaya -> curr -> not none
         if curr != None:
+            # logic 
             new_node.next - curr.next
             curr.next = new_node
-            # logic 
         else :
             return 'Item not found'
+
+
+    def clear(self):
+        self.head = None
+        self.n = 0
+
+
+    
+
+
 
 
 
