@@ -55,7 +55,7 @@ the reducers and their respective states.
 console.log("Initial State : ", store.getState());
 
 
-const addTask = (data) => {
+export const addTask = (data) => {
   return {
        type : ADD_TASK,
        payload : data || 'go to gym' 

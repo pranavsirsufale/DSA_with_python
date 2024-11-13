@@ -88,6 +88,82 @@ class LinkedList:
         self.n = 0
 
 
+    def delete_head(self):
+        if self.head == None:
+            #empty 
+            return 'Empty lInked list'
+        self.head = self.head.next
+        self.n = self.n -1
+
+
+
+    def pop(self):
+
+        if self.head == None:
+            # empty 
+            return 'Empty LL'
+
+
+        # kya linked list me 1 item hai
+        if curr.next == None : 
+            # head hi hoga ( delete from head)
+            return 
+        curr = self.head
+        while curr.next.next != None:
+            curr = curr.next
+        
+        # curr -> 2nd last node
+        curr.next = None
+        self.n = self.n -1
+
+    
+    def remove(self,value):
+        if self.haed == None:
+            return 'Empty linked list'
+
+        if self.head.data == value:
+            # you want to remove the head node
+            return self.delete_head()
+
+
+        curr = self.head
+
+        while curr.next != None:
+            if curr.next.data == value:
+                break
+            curr = curr.next
+        # 2 cases item mil gaya
+        # item nai mila 
+
+        if curr.next == None:
+            # item nahi mila
+            return "Not found"
+        else:
+            curr.next = curr.next.next
+
+    def search(self,item):
+        curr = self.head
+        pos = 0
+
+        while curr != None:
+            if curr.data == item:
+                return pos
+            curr = curr.next
+            pos = pos + 1
+        return 'Not Found'
+
+    def __getitem__(self,index):
+        curr = self.head
+        pos = 0
+
+        while curr != None:
+            if pos == index:
+                return curr.data
+            curr = curr.data
+            pos += 1
+        return "indexError"
+
+
     
 
 
