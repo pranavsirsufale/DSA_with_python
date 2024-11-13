@@ -1,11 +1,9 @@
-
+import Todo from "./components/Todo"
 
 
 const App = () =>{
   return (
-    <div>
-      <h1>from app</h1>
-    </div>
+  <Todo/>
   )
 }
 
