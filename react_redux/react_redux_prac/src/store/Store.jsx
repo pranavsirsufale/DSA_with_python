@@ -58,7 +58,7 @@ console.log("Initial State : ", store.getState());
 const addTask = (data) => {
   return {
        type : ADD_TASK,
-       payload : data 
+       payload : data || 'go to gym' 
    }
 }
 
@@ -69,16 +69,16 @@ const delteteTask = (id) => {
 }
 
 
-store.dispatch(addTask())
+store.dispatch(addTask("Exercise daily"))
 console.log("Initial State : ", store.getState());
 
 
 
-store.dispatch({
-    type : DELETE_TASK,
-    payload : 0
-})
-console.log("Initial State : ", store.getState());
+// store.dispatch({
+//     type : DELETE_TASK,
+//     payload : 0
+// })
+// console.log("Initial State : ", store.getState());
 
 // step 5 : Create action creators 
 
