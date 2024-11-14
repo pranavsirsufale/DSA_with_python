@@ -1,5 +1,6 @@
-import { createStore } from 'redux'
-
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from '@redux-devtools/extension'
+import { thunk } from 'redux-thunk'
 
 
 // defined action types
@@ -34,7 +35,7 @@ const taskReducer = (state = initialState, action) => {
 
 
 // step 2 : Create the Redux store using the reducer
-export const store = createStore(taskReducer);
+export const store = createStore(taskReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 console.log(store);
 
@@ -64,8 +65,8 @@ export const addTask = (data) => {
 
 
 
-const delteteTask = (id) => {
-   return { type : ADD_TASK,payload : id }
+export const delteteTask = (id=0) => {
+   return { type : DELETE_TASK ,payload : id }
 }
 
 
@@ -82,4 +83,19 @@ console.log("Initial State : ", store.getState());
 
 // step 5 : Create action creators 
 
+
+const line = 'https://jsonplaceholder.typicode.com/todo?_limit=3'
+
+
+export const fetchTask = () => {
+  return async ( dispatch ) => {
+    try {
+      const res = await fetch(line);
+
+      const task = await res.json();
+    } catch (error) {
+      
+    }
+  }
+}
 
