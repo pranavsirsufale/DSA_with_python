@@ -6,6 +6,7 @@ import { thunk } from 'redux-thunk'
 // defined action types
 const ADD_TASK = "task/add";
 const DELETE_TASK = "task/delete";
+const FETCH_TASK = 'task/tak'
 
 
 // step 1: create reducer 
@@ -27,6 +28,12 @@ const taskReducer = (state = initialState, action) => {
         ...state,
         task: state.task.filter((item,index) => index !== action.payload),
       };
+    
+    case FETCH_TASK:
+      return{
+        ...state,
+        task : [...state.task, action.payload]
+      }
 
     default:
       return state;
@@ -93,6 +100,7 @@ export const fetchTask = () => {
       const res = await fetch(line);
 
       const task = await res.json();
+      dispatch({ type : FETCH_TASK, payload : task })
     } catch (error) {
       
     }
