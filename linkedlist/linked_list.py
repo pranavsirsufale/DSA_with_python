@@ -189,6 +189,39 @@ print(len(L))
 print(L)
 
 
+'''
+Given a linked list of characters, write a python function to return a new string that is creaated by 
+# appending all the characters given in the linekd list as per the rules given below 
+
+
+# rules >
+# replace '*' or '/' by a single space
+# In case of two constructive occurences of '*' '/'. replace those two occurences by a single space and 
+convert the next chacater to upper case
+
+# assume that ->
+there will not be more than two consecutive occurences of '*' or '/'
+# The linked list will always end with an alphabet
+
+
+# sample input
+# An Apple a day Keeps A Doctor way
+
+expected output
+
+
+
+'''
+
+
+
+
+
+
+
+
+
+
 
 
 
