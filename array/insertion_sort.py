@@ -41,7 +41,7 @@ def print_array(arr):
     print(arr)
 
 if __name__ == "__main__":
-    arr = [12,11,13,5,6]
+    arr = [12,11,13,5,6,50,60,1]
     insertion_sort(arr)
     print_array(arr)
   
