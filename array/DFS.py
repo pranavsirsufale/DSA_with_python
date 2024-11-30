@@ -42,3 +42,17 @@ visited = set()
 print('DFS (REcurive):' , end=" ")
 dfs_recursive(graph,'A',visited)
 
+
+
+
+import networkx as nx
+
+# Create the graph
+G = nx.Graph()
+G.add_edges_from([('A', 'B'), ('A', 'C'), ('B', 'D'), ('B', 'E'), ('C', 'F'), ('C', 'G')])
+
+
+
+# Perform DFS
+dfs_nodes = list(nx.dfs_preorder_nodes(G, source='A'))
+print("\nDFS using NetworkX:", dfs_nodes)
