@@ -162,7 +162,6 @@ plt.scatter(x,y2)
 plt.legend(['x*2','x*3'])
 plt.show()
 
-'''
 
 
 x = [0.1,0.2,0.3,0.4,0.5]
@@ -174,4 +173,8 @@ plt.title('connected scatter plot points with lsense')
 plt.scatter(x,y,s=size,alpha=0.6,edgecolors='b')
 plt.plot(x,y)
 plt.show()
+
+'''
+
+
 
