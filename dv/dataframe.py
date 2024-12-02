@@ -94,10 +94,12 @@ plt.plot(ypoints,marker='o')
 plt.show()
 
 
+
+ypoint = np.array([3,8,1,10])
+plt.plot(ypoint,'o:r')
+plt.show()
+
 '''
-
-
-
 
 
 
