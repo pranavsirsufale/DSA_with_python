@@ -105,7 +105,6 @@ ypoint = np.array([3,8,1,10])
 plt.plot(ypoint,linestyle='dotted')
 plt.show()
 
-'''
 
 y = [2,3,4.5]
 y2 = [1,1.5,5]
@@ -113,6 +112,12 @@ plt.plot(y)
 plt.plot(y2)
 plt.legend(['blue','green'],loc='upper left')
 plt.show()
+
+'''
+
+
+
+
 
 
 
