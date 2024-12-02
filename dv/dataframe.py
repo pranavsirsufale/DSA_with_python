@@ -151,7 +151,6 @@ plt.xlabel('x-axis')
 plt.ylabel('y-label')
 plt.show()
 
-'''
 
 x = [1,2,3,4,5]
 y1 = [2,4,6,8,10]
@@ -163,5 +162,6 @@ plt.scatter(x,y2)
 plt.legend(['x*2','x*3'])
 plt.show()
 
+'''
 
 
