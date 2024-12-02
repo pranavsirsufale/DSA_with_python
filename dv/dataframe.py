@@ -124,7 +124,6 @@ plt.plot(y2)
 plt.legend(['blue','green'],loc='upper left')
 plt.show()
 
-'''
 
 y = [ x for x in range(1,1000)]
 
@@ -139,6 +138,19 @@ plt.plot(y,y2, label='Square of numbers')
 plt.legend()
 plt.show()
 
+'''
+
+
+x_values = [i for i in range(1,6)]
+y_values = [2,3,5,7,11]
+
+buttle_size = [30,80,150,200,300]
+
+plt.scatter(x_values,y_values,s=buttle_size,alpha=0.6,edgecolors='g',linewidths=2)
+plt.title('Bubble chart with Trnsperancy')
+plt.xlabel('x-axis')
+plt.ylabel('y-label')
+plt.show()
 
 
 
