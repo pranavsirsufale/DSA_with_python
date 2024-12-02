@@ -126,6 +126,19 @@ plt.show()
 
 '''
 
+y = [ x for x in range(1,1000)]
+
+# print(y)
+y2 = []
+for i in y:
+    y2.append(i**2)
+# print(y2)
+
+plt.plot(y,y,label='Numbers')
+plt.plot(y,y2, label='Square of numbers')
+plt.legend()
+plt.show()
+
 
 
 
