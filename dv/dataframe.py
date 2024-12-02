@@ -138,7 +138,6 @@ plt.plot(y,y2, label='Square of numbers')
 plt.legend()
 plt.show()
 
-'''
 
 
 x_values = [i for i in range(1,6)]
@@ -151,6 +150,10 @@ plt.title('Bubble chart with Trnsperancy')
 plt.xlabel('x-axis')
 plt.ylabel('y-label')
 plt.show()
+
+'''
+
+
 
 
 
