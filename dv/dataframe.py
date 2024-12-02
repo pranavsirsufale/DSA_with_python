@@ -113,7 +113,6 @@ plt.plot(y2)
 plt.legend(['blue','green'],loc='upper left')
 plt.show()
 
-'''
 
 
 
@@ -125,6 +124,7 @@ plt.plot(y2)
 plt.legend(['blue','green'],loc='upper left')
 plt.show()
 
+'''
 
 
 
