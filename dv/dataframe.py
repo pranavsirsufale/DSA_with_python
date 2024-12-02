@@ -99,13 +99,13 @@ ypoint = np.array([3,8,1,10])
 plt.plot(ypoint,'o:r')
 plt.show()
 
-'''
 
 
 ypoint = np.array([3,8,1,10])
 plt.plot(ypoint,linestyle='dotted')
 plt.show()
 
+'''
 
 
 
