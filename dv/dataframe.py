@@ -165,3 +165,13 @@ plt.show()
 '''
 
 
+x = [0.1,0.2,0.3,0.4,0.5]
+y = [6.2,-8.4,8.5,9.2,-6.3]
+size = [100,220,330,440,550]
+
+
+plt.title('connected scatter plot points with lsense')
+plt.scatter(x,y,s=size,alpha=0.6,edgecolors='b')
+plt.plot(x,y)
+plt.show()
+
