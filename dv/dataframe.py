@@ -174,7 +174,6 @@ plt.scatter(x,y,s=size,alpha=0.6,edgecolors='b')
 plt.plot(x,y)
 plt.show()
 
-'''
 
 x = [i for i in range(1,11)]
 y = [8,7,6,4,5,6,7,8,9,10]
@@ -191,4 +190,16 @@ plt.ylabel('y-axis',fontsize = 18)
 plt.show()
 
 
+
+from matplotlib import style
+data = np.random.random(50)
+print(data)
+print(plt.style.available)
+
+plt.style.use('Solarize_Light2')
+# plt.style.use('seaborn-v0_8-whitegrid')
+plt.plot(data)
+plt.show()
+
+'''
 
