@@ -54,11 +54,15 @@ print(neg_val + 2)
 
 #Write a python program for calculate the factorial of a number using a for loop.
 
+'''
 def calculate_factorial(n):
     facto = 1
     for i in range(1,n+1):
         facto *= i
     return facto
-
 print(calculate_factorial(5))
+'''
+
+
+
 
