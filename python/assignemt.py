@@ -65,4 +65,16 @@ print(calculate_factorial(5))
 
 
 
+# Write a python program to generate the Fibonacci series up to N terms.
+
+# feboo = 0 1 1 2 3 5 8 13 21 34
+
+def fiboo(number_of_terms):
+    array = [0,1]
+    for i in range(number_of_terms-2):
+        array.append(array[i] + array[i+1])
+    return array
+
+print(fiboo(10))
+
 
