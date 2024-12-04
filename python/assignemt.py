@@ -83,7 +83,7 @@ print(fiboo(10))
 # Write a python program for Check if a number is prime using for loop.
 
 
-
+'''
 def check_prime(n):
     if n <= 1:
         return f'{n} : is Prime number'
@@ -92,7 +92,10 @@ def check_prime(n):
         if n % i == 0:
             return f'{n} : is not a Prime number'
     return f'{n} : is a Prime number'
-
 print(check_prime(3))
+'''
+
+
+
 
 
