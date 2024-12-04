@@ -97,5 +97,20 @@ print(check_prime(3))
 
 
 
+# Write a python program to Calculate the sum of digits of a number using a while loop.
+
+def calculate_sum(digit):
+    digit = str(digit)
+    sum=i = 0
+    while i < len(digit):
+        sum += float(digit[i])
+        i += 1
+    return sum
+
+
+digit = 1234569 # 21
+print(calculate_sum(digit))
+
+
 
 
