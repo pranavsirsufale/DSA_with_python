@@ -40,4 +40,16 @@ def area_of_rectangle(width,length):
     return (width*length)
 '''
 
+# Write python program to perform declare positive values but print negative values
+
+'''
+def pos_to_neg(positive_number):
+    return  -positive_number
+n_number = 65466
+# print(pos_to_neg(n_number))
+neg_val = pos_to_neg(n_number)
+print(neg_val + 2)
+'''
+
+
 
