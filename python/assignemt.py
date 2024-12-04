@@ -34,3 +34,10 @@ print(area_of_square(side))
 # area of rectangle = side * length
 
 
+
+'''
+def area_of_rectangle(width,length):
+    return (width*length)
+'''
+
+
