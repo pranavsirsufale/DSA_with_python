@@ -110,6 +110,32 @@ digit = 1234569 # 21
 print(calculate_sum(digit))
 '''
 
+#Write a python program for reverse a given number using a while loop.
+
+def reverse_number(n):
+    # n = [i for i in str(n)]
+    # second_pointer = len(n)-1
+    # print(n)
+    # for i in range(int(len(n)/2)):
+    #     n[i],n[second_pointer] = n[second_pointer],n[i]
+    #     second_pointer -= 1
+    # return n
+    reversed_number = 0
+
+    while n > 0 :
+        last_digit = n % 10
+        reversed_number = (reversed_number * 10 ) + last_digit
+        n //= 10
+    return reversed_number 
+
+
+
+number = 13132
+
+rev_num = reverse_number(number)
+print(rev_num)
+
+
 
 
 
