@@ -155,6 +155,7 @@ print(check_is_prime(7))
 # Write a python program computes the length of a list using recursion
 
 
+'''
 listt = [165, 6, 1, 61, 6, 1, 61, 1, 651, 16516]
 
 def find_length(n):
@@ -169,7 +170,23 @@ def find_length(n):
 # Example usage
 print(find_length(0))  # Output: 10
 
+'''
 
+
+# print extentation of file 
+'''
+filename = 'something.txt'
+def print_ext(finematwithextentaion):
+    return finematwithextentaion[finematwithextentaion.index('.')+1:]
+print(print_ext(filename))
+'''
+
+
+
+
+
+
+    
 
 
 
