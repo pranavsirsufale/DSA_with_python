@@ -14,3 +14,22 @@ print("Set created using set() constructor:", another_set)
 '''
 
 
+# Write a Python program to add member(s) to a set.
+
+'''
+# Creating a set
+my_set = {1, 2, 3}
+
+# Adding a single element using add()
+my_set.add(4)
+print("Set after adding 4:", my_set)
+
+# Adding multiple elements using update()
+my_set.update([5, 6, 7])
+print("Set after adding 5, 6, 7:", my_set)
+
+'''
+
+
+
+
