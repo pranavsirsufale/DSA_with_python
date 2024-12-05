@@ -1,6 +1,7 @@
 import math
 import calendar
 from datetime import date
+import os
 
 # Q 1) Write a python program to accept the radius from the user and print area of the circle?
 
@@ -242,6 +243,22 @@ def area_of_triangle(base,height):
     return (0.5)* (base) * (height)
 print(area_of_triangle(10,15))
 '''
+
+
+#Write a python program to check whether a file exists.
+
+'''
+def check_path_exists(path):
+    if os.path.exists(path):
+        return 'File exists'
+    else:
+        return 'File does not exist'
+
+address = 'F:/DSA/practical/python'
+path = r'F:/DSA/practical/python/area_of_circle.py'
+print(check_path_exists(path))
+'''
+
 
 
 
