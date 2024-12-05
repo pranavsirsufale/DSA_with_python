@@ -2,6 +2,7 @@ import math
 import calendar
 from datetime import date
 import os
+import subprocess
 
 # Q 1) Write a python program to accept the radius from the user and print area of the circle?
 
@@ -258,6 +259,39 @@ address = 'F:/DSA/practical/python'
 path = r'F:/DSA/practical/python/area_of_circle.py'
 print(check_path_exists(path))
 '''
+
+# Write a python program that calls an external command.
+
+'''
+
+def run_command(command):
+    try:
+        # Run the command and capture the output
+        result = subprocess.run(command, shell=True, check=True, text=True, capture_output=True)
+        
+        # Print the command output
+        print("Command output:", result.stdout)
+        print("Command error (if any):", result.stderr)
+    except subprocess.CalledProcessError as e:
+        print(f"Command failed with error: {e}")
+
+# Example usage
+command = 'echo Hello, World!'  # You can replace this with any command you want to run
+run_command(command)
+
+'''
+
+
+
+# Write a python program to retrieve the path and name of the file currently being executed.
+
+'''
+print(os.path.abspath(__file__))
+print(__file__)
+print(os.path.dirname(__file__))
+print(os.path.basename(__file__))
+'''
+
 
 
 
