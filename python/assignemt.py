@@ -152,6 +152,26 @@ print(check_is_prime(7))
     
 
 
+# Write a python program computes the length of a list using recursion
+
+
+listt = [165, 6, 1, 61, 6, 1, 61, 1, 651, 16516]
+
+def find_length(n):
+    try:
+        # Try to access the nth element
+        listt[n]
+        # If successful, continue recursion
+        return find_length(n + 1)
+    except IndexError:
+        # Return the current index when IndexError is raised
+        return n
+# Example usage
+print(find_length(0))  # Output: 10
+
+
+
+
 
 
 
