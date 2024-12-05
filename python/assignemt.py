@@ -1,5 +1,6 @@
 import math
-
+import calendar
+from datetime import date
 
 # Q 1) Write a python program to accept the radius from the user and print area of the circle?
 
@@ -180,6 +181,40 @@ def print_ext(finematwithextentaion):
     return finematwithextentaion[finematwithextentaion.index('.')+1:]
 print(print_ext(filename))
 '''
+
+
+# Write a python program that prints the calendar for a given month and year. Note : use 'calendar' module. 
+
+'''
+def print_calendar(year,month):
+    print(calendar.month(year,month))
+print_calendar(2024,12)
+'''
+
+
+# Write a python program to calculate the number of days between two dates. Sample dates: (2014, 7, 2), (2014, 7, 11)
+
+
+'''
+def calculate_days_between(date1, date2):
+    d1 = date(*date1)
+    d2 = date(*date2)
+    delta = d2 - d1
+    return abs(delta.days) 
+
+
+date1 = (2014, 7, 2)
+date2 = (2014, 7, 11)
+
+
+days_between = calculate_days_between(date1, date2)
+print(f"Number of days between {date1} and {date2}: {days_between}")
+'''
+
+
+
+
+
 
 
 
