@@ -214,6 +214,37 @@ print(f"Number of days between {date1} and {date2}: {days_between}")
 
 
 
+#Write a python program that prints out all colors from color_list_1 that are not present in color_list_2.
+'''
+Test data :
+color_list_1 = set(["white", "black", "red"])
+color_list_2 = set(["red", "green"]) 
+expected output :
+{'black', 'white'}
+'''
+
+'''
+color_list_1 = set(["white", "black", "red"])
+color_list_2 = set(["red", "green"]) 
+
+print(set.difference(color_list_1,color_list_2))
+
+for i in color_list_1:
+    if i not in color_list_2:
+        print(i)
+
+'''
+
+
+# area of triangle 
+'''
+def area_of_triangle(base,height):
+    return (0.5)* (base) * (height)
+print(area_of_triangle(10,15))
+'''
+
+
+
 
 
 
