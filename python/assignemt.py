@@ -3,6 +3,8 @@ import calendar
 from datetime import date
 import os
 import subprocess
+import socket
+
 
 # Q 1) Write a python program to accept the radius from the user and print area of the circle?
 
@@ -292,6 +294,23 @@ print(os.path.dirname(__file__))
 print(os.path.basename(__file__))
 '''
 
+
+# Write a python program to find local ip addresses using python's stdlib.
+
+'''
+hostname = socket.gethostname()
+# Get the local IP address associated with the hostname
+print(socket.gethostbyname(hostname))
+local_ip = 0
+
+print(local_ip)
+
+'''
+
+
+
+
+# Write a python script to sort (ascending and descending) a dictionary by value
 
 
 
