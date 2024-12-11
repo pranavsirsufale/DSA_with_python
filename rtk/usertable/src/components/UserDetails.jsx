@@ -1,6 +1,21 @@
 import React from 'react'
 import { DeleteAllUser } from './DeleteAllUser'
 import styled from 'styled-components'
+import { fakeUserData } from '../api';
+import { useDispatch  } from 'react-redux';
+import { addUser } from '../store/slices/Userslice';
+import { useStore } from 'react-redux';
+
+const dispatch = useDispatch()
+
+const addNewUser = (name) => {
+
+    dispatch(addUser(name))
+    
+    
+}
+
+
 function UserDetails() {
   return (
     <Wrapper>
@@ -9,7 +24,9 @@ function UserDetails() {
             <div className='admin-subtitle' >
                 List of User Detials
             </div>
-            <button className='btn add-btn' >Add New User</button>
+            <button
+            onClick={()=>addNewUser(fakeUserData())}
+            className='btn add-btn' >Add New User</button>
         </div>
             <ul>
                 <li>Hii</li>
