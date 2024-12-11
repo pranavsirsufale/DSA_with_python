@@ -2,9 +2,6 @@ import Chance from 'chance'
 
 const chance = Chance()
 
-export const fakeUserData = () => {
-    // retunr 
-    console.log(chance.name({ middle : true }))
-}
-
-// fakeUserData();
+export const fakeUserData = () => (
+     chance.name({ middle : true })
+    )

@@ -4,9 +4,13 @@ import styled from 'styled-components'
 import { fakeUserData } from '../api';
 import { useDispatch  } from 'react-redux';
 import { addUser } from '../store/slices/Userslice';
-import { useStore } from 'react-redux';
+import DisplayUsrs from './DisplayUsrs';
 
-const dispatch = useDispatch()
+
+function UserDetails() {
+
+
+    const dispatch = useDispatch()
 
 const addNewUser = (name) => {
 
@@ -16,7 +20,7 @@ const addNewUser = (name) => {
 }
 
 
-function UserDetails() {
+
   return (
     <Wrapper>
     <div className='content' >
@@ -29,8 +33,7 @@ function UserDetails() {
             className='btn add-btn' >Add New User</button>
         </div>
             <ul>
-                <li>Hii</li>
-                <li>Hii</li>
+                <DisplayUsrs/>
             </ul>
             <hr />
             <DeleteAllUser/>
