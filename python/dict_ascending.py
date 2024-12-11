@@ -11,5 +11,9 @@ sorted_dict_asc = sort_dict_by_value(my_dict, ascending=True)
 print("Sorted Dictionary (Ascending):", sorted_dict_asc)
 
 
-sorted_dict_desc = sort_dict_by_value(my_dict, ascending=False)
-print("Sorted Dictionary (Descending):", sorted_dict_desc)
+# sorted_dict_desc = sort_dict_by_value(my_dict, ascending=False)
+# print("Sorted Dictionary (Descending):", sorted_dict_desc)
+
+
+
+
