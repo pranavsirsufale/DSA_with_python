@@ -8,9 +8,8 @@ const DisplayUsrs = () => {
 
     const dispatch = useDispatch()
     const data = useSelector((state)=> ( state.users) )
-
     const handleRemoveUser = (index) => {
-        dispatch(removeUser(index))
+    dispatch(removeUser(index))
     }
 
 

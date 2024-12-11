@@ -1,9 +1,16 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from 'react-redux'
 import userSlice from "./slices/Userslice";
+import adminSlice from './slices/Adminslice'
+import reducer from './slices/Userslice';
+
 const store = configureStore({
-    reducer :{
-        users : userSlice
-    }
+   reducer : {
+    user : userSlice,
+    admin : adminSlice
+   }
 })
 
-export default store;
+export default store
+
+
+
