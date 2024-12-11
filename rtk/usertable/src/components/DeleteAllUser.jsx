@@ -5,12 +5,9 @@ import { clearUser } from '../store/slices/Userslice';
 export const DeleteAllUser = () => {
 
   const dispatch = useDispatch()
-
-  
-
   return (
     <Wrapper>
-    <button className='clear-btn'  onClick={()=>dispatch(clearUser())} >
+    <button className='btn clear-btn'  onClick={()=>dispatch(clearUser())} >
     Clear All User 
   </button>
   </Wrapper>

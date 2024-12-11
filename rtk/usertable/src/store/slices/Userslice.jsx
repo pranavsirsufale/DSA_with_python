@@ -12,7 +12,7 @@ const userSlice = createSlice({
                 state.splice(action.payload,1)
             },
             clearUser(state,action){
-                state.length = 0
+                return []
             },
         }
     }
