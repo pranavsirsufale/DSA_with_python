@@ -3,7 +3,7 @@ import { DeleteAllUser } from './DeleteAllUser'
 import styled from 'styled-components'
 import { fakeUserData } from '../api';
 import { useDispatch  } from 'react-redux';
-import { addUser } from '../store/slices/Userslice';
+import { addUser,clearUser } from '../store/slices/Userslice';
 import DisplayUsrs from './DisplayUsrs';
 
 
@@ -13,11 +13,9 @@ function UserDetails() {
     const dispatch = useDispatch()
 
 const addNewUser = (name) => {
-
     dispatch(addUser(name))
-    
-    
 }
+
 
 
 
@@ -36,6 +34,8 @@ const addNewUser = (name) => {
                 <DisplayUsrs/>
             </ul>
             <hr />
+
+
             <DeleteAllUser/>
 
 

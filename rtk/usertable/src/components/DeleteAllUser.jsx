@@ -1,7 +1,27 @@
-import React from 'react'
+import styled from 'styled-components';
+import { useDispatch , useSelector} from 'react-redux';
+import { clearUser } from '../store/slices/Userslice';
 
 export const DeleteAllUser = () => {
+
+  const dispatch = useDispatch()
+
+  
+
   return (
-    <div>DeleteAllUser</div>
+    <Wrapper>
+    <button className='clear-btn'  onClick={()=>dispatch(clearUser())} >
+    Clear All User 
+  </button>
+  </Wrapper>
   )
 }
+
+const Wrapper = styled.section`
+.clear-btn{
+text-transform : capitalize;
+background-color : #db338a;
+margin-top: 2rem;
+}
+`
+
