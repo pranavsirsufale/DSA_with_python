@@ -9,8 +9,8 @@ const DisplayUsrs = () => {
     const dispatch = useDispatch()
     const data = useSelector((state)=> ( state.users) )
 
-    const handleRemoveUser = (username) => {
-        dispatch(removeUser(username))
+    const handleRemoveUser = (index) => {
+        dispatch(removeUser(index))
     }
 
 
@@ -20,7 +20,7 @@ const DisplayUsrs = () => {
         data.map((username,index) => (
             <li key={index} > {username} 
              <button className="btn-delete" > 
-                <MdDeleteForever onClick={()=>handleRemoveUser(username)}  className='delete-icon' />
+                <MdDeleteForever onClick={()=>handleRemoveUser(index)}  className='delete-icon' />
                  </button>   
             </li>
         ))

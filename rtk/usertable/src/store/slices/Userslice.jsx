@@ -9,10 +9,7 @@ const userSlice = createSlice({
                 state.push(action.payload)
             },
             removeUser(state,action){
-                state = state.filter((storeName,index)=>(
-                    storeName = action.payload
-                    
-                ))
+                state.splice(action.payload,1)
                 console.log(action.payload);
                 
             },
