@@ -14,8 +14,11 @@ const userSlice = createSlice({
             clearUser(state,action){
                 return []
             },
-        }
+        },
+        extraReducers 
     }
+
+
 )
 
 export default userSlice.reducer;
