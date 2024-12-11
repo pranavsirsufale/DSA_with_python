@@ -1,18 +1,28 @@
 import styled from "styled-components"
-import { useSelector } from "react-redux"
+import { useSelector ,useDispatch } from "react-redux"
+import { MdDeleteForever } from "react-icons/md";
+import { removeUser } from "../store/slices/Userslice";
+
 
 const DisplayUsrs = () => {
 
+    const dispatch = useDispatch()
     const data = useSelector((state)=> ( state.users) )
 
-
+    const handleRemoveUser = (username) => {
+        dispatch(removeUser(username))
+    }
 
 
   return (
     <Wrapper>
     {
         data.map((username,index) => (
-            <li key={index} > {username} </li>
+            <li key={index} > {username} 
+             <button className="btn-delete" > 
+                <MdDeleteForever onClick={()=>handleRemoveUser(username)}  className='delete-icon' />
+                 </button>   
+            </li>
         ))
     }
     </Wrapper>
@@ -27,6 +37,12 @@ const Wrapper = styled.section`
     list-style-type: none !important;
     display: flex;
     flex-direction: column;
+  }
+
+  ul {
+   display: flex;
+justify-content: space-between;
+   
   }
 
   h3 {

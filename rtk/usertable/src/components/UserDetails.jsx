@@ -32,7 +32,7 @@ const addNewUser = (name) => {
             onClick={()=>addNewUser(fakeUserData())}
             className='btn add-btn' >Add New User</button>
         </div>
-            <ul>
+            <ul className='list-of-users' >
                 <DisplayUsrs/>
             </ul>
             <hr />
