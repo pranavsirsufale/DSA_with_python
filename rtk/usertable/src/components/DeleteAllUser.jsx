@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { useDispatch , useSelector} from 'react-redux';
-import { clearUser } from '../store/slices/Userslice';
-
+import { clearUser } from '../store/actions';
 export const DeleteAllUser = () => {
 
   const dispatch = useDispatch()

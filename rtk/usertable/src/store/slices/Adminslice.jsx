@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { clearAdmin } from "../actions";
 
 const adminSlice = createSlice({
     name : 'admin',
@@ -10,12 +11,9 @@ const adminSlice = createSlice({
         removeAdmin(state,action){
             state.splice(action.payload,1)
         },
-        clearAdminData(state,action){
-            return [];
-        },
     },
     extraReducers(builder){
-        builder.addCase(adminSlice.actions.clearAdminData,()=>{
+        builder.addCase(clearAdmin,()=>{
             return [];
         })
     }
