@@ -1,5 +1,5 @@
+import { useDispatch,useSelector} from 'react-redux'
 import styled from "styled-components"
-import { useSelector ,useDispatch } from "react-redux"
 import { MdDeleteForever } from "react-icons/md";
 import { removeUser } from "../store/slices/Userslice";
 
@@ -7,13 +7,14 @@ import { removeUser } from "../store/slices/Userslice";
 const DisplayUsrs = () => {
 
     const dispatch = useDispatch()
-    const data = useSelector((state)=> ( state.users) )
+    const data = useSelector((state)=> ( state.user) )
     const handleRemoveUser = (index) => {
     dispatch(removeUser(index))
     }
 
 
   return (
+    
     <Wrapper>
     {
         data.map((username,index) => (

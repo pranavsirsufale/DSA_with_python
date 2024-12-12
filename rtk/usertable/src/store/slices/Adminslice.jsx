@@ -4,10 +4,14 @@ const adminSlice = createSlice({
     name : 'admin',
     initialState : [],
     reducers : {
-        addAdmin(action,payload){},
-        removeAdmin(action,payload){},
-        clearAdminData(action,payload){
-            
+        addAdmin(state,action){
+            state.push(action.payload)
+        },
+        removeAdmin(state,action){
+            state.splice(action.payload,1)
+        },
+        clearAdminData(state,action){
+            return [];
         },
     },
     extraReducers(builder){
@@ -18,4 +22,6 @@ const adminSlice = createSlice({
 })
 
 
-export default adminSlice.reducer
+export default adminSlice.reducer;
+
+export const { addAdmin , removeAdmin } = adminSlice.actions;

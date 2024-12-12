@@ -1,19 +1,24 @@
 import React from 'react'
 import { DeleteAllUser } from './DeleteAllUser'
 import styled from 'styled-components'
-import { fakeUserData } from '../api';
+import { fakeUserData , fakeCompany } from '../api';
 import { useDispatch  } from 'react-redux';
 import { addUser,clearUser } from '../store/slices/Userslice';
 import DisplayUsrs from './DisplayUsrs';
+import { addAdmin } from '../store/slices/Adminslice';
+import { useSelector } from 'react-redux';
 
 
 function UserDetails() {
 
+    const adminData = useSelector((state)=> ( state.admin))
+    
 
     const dispatch = useDispatch()
 
 const addNewUser = (name) => {
     dispatch(addUser(name))
+    dispatch(addAdmin(fakeCompany()))
 }
 
 
