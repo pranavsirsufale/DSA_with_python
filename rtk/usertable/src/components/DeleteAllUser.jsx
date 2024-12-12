@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 import { useDispatch , useSelector} from 'react-redux';
-import { clearUser } from '../store/actions';
+import { clearAdmin, clearUser } from '../store/actions';
 export const DeleteAllUser = () => {
 
   const dispatch = useDispatch()
+
+  const handleClearOperation = () => {
+    dispatch(clearUser())
+    dispatch(clearAdmin())
+  }
+
   return (
     <Wrapper>
-    <button className='btn clear-btn'  onClick={()=>dispatch(clearUser())} >
+    <button className='btn clear-btn'  onClick={handleClearOperation} >
     Clear All User 
   </button>
   </Wrapper>
