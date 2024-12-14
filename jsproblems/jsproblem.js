@@ -126,7 +126,9 @@ console.log("INVALID JSON DATA : ", json_validator_fun(invalid_json))
 */
 
 
+// ? Q.3) Write a function reverseString()
 
+/*
 
 let str = "hello JavaScript Developer"
 let spt_str = str.split(' ')
@@ -145,3 +147,7 @@ for(let vlaue of spt_str){
     counter++
 }
 console.log(to_uppend)
+ */
+
+
+
