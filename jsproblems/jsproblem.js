@@ -52,12 +52,14 @@ function fetchData() {
 */
 
 
-//! Q2>>> Q.2) Write a function parseJSON() that:
+//! Q2>>>Write a function parseJSON() that:
 //?>>• Takes a JSON string as input.
 //?>> • Returns the parsed JavaScript object if the JSON string is valid.
 //?>>• If the JSON string is invalid (i.e., it cannot be parsed), catch the error and return the message "Invalid JSON".
 
 
+
+/*
 const valid_json = JSON.stringify({
     "employees": [
       {
@@ -121,5 +123,25 @@ console.log( " VALID JSON DATA : " ,json_validator_fun(valid_json))
 
 console.log("INVALID JSON DATA : ", json_validator_fun(invalid_json))
 
+*/
 
 
+
+
+let str = "hello JavaScript Developer"
+let spt_str = str.split(' ')
+const reverse_str = (st) => {
+    let new_str = ''
+    for( let i = st.length-1 ; i > -1 ; i--){
+        new_str += st[i]
+    }
+    return new_str
+}
+let reversed_str = []
+let to_uppend = ""
+let counter = 0 
+for(let vlaue of spt_str){
+    counter === 0 ? to_uppend += reverse_str(vlaue) : to_uppend += ` ${reverse_str(vlaue)}` 
+    counter++
+}
+console.log(to_uppend)
