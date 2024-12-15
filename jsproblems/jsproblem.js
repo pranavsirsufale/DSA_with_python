@@ -151,3 +151,27 @@ console.log(to_uppend)
 
 
 
+//? Both the code written by me >>>
+/*
+let str = "hello JavaScript Developer".split(' ')
+console.log(str);
+function reverse_str(st){
+  let rev_str = ''
+  for(let i = st.length -1 ; i > -1 ; i--){
+    rev_str += st[i]
+  }
+  return rev_str
+}
+let new_empty_array = []
+for(let vlaues of str){
+  new_empty_array.push(reverse_str(vlaues))
+}
+
+console.log(new_empty_array.join(' ',','))
+
+*/
+
+
+
+
+
