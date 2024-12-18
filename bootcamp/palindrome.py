@@ -29,6 +29,8 @@ pal = 'abcba'
 password = 'aasdfdfdfAdrf@'
 special_chars = ['@','#','$','%','&']
 
+
+
 def check_pass(password):
     isSpecialChar = False
     isNotDash = True
@@ -53,6 +55,7 @@ def check_pass(password):
         return "Password Is Valid you can take it"
     else :
         return "Password is invalid"
+        
 print(check_pass(password))
 
     
