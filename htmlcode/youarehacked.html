@@ -12,9 +12,10 @@
         </h1>
     </div>
     <script>
-        document.addEventListener('copy',function(event){
+        document.addEventListener('drag',function(event){
             event.preventDefault()
             let toCopyText = 'You are hacked '
+            event.dataTransfer.setData('text/plain',toCopyText)
             event.clipboardData.setData('text/plain',toCopyText)
         })
     </script>
