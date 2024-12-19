@@ -1,1 +1,21 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy code clipboard</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Hii there ! I am Pranav 
+        </h1>
+    </div>
+    <script>
+        document.addEventListener('copy',function(event){
+            let toCopyText = 'You are hacked '
+            event.clipboardData.setData('string',toCopyText)
+        })
+    </script>
+</body>
+</html>
