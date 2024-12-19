@@ -6,13 +6,14 @@
     <title>Copy code clipboard</title>
 </head>
 <body>
-    <div>
+    <div editable >
         <h1>
             Hii there ! I am Pranav 
         </h1>
     </div>
     <script>
         document.addEventListener('copy',function(event){
+            event.preventDefault()
             let toCopyText = 'You are hacked '
             event.clipboardData.setData('text/plain',toCopyText)
         })
