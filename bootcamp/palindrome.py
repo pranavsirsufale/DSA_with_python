@@ -28,9 +28,6 @@ pal = 'abcba'
 
 password = 'aasdfdfdfAdrf@'
 special_chars = ['@','#','$','%','&']
-
-
-
 def check_pass(password):
     isSpecialChar = False
     isNotDash = True
