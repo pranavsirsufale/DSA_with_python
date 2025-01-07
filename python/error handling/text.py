@@ -26,16 +26,10 @@ def load_data():
             return json.load(file)
     except FileNotFoundError:
         return []
-    
-
-
-
 
 def save_data_helper(videos):
     with open('youtube.txt','w') as file:
         json.dump(videos,file)
-
-
 
 def main():
     videos = load_data()
@@ -61,7 +55,6 @@ def main():
                 break
             case _:
                 print('wrong input')
-
 
 #! the double underscore called dunder >>>
 if __name__ == '__main__':
