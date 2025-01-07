@@ -23,7 +23,9 @@ def delete_vidoe(video):
 def load_data():
     try:
         with open('youtuve.txt','r') as file:
-            return json.load(file)
+            test = json.load(file)
+            print(type(test))
+            return test
     except FileNotFoundError:
         print('an empty file is returned')
         return []
