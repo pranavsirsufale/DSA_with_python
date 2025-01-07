@@ -1,3 +1,6 @@
+import json 
+
+
 def list_all_videos(vide):
     pass
 
@@ -10,9 +13,16 @@ def update_video(vide):
 def delete_vidoe(video):
     pass
 
+def load_data():
+    try:
+        with open('youtuve.txt','r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
+
 
 def main():
-    videos = []
+    videos = load_data()
     while True:
         print("\n Youtube manager | Choose an option")
         print("1. List the favourite video")
