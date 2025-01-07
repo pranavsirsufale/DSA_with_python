@@ -21,8 +21,15 @@ def add_video(videos):
 def update_video(vide):
     pass
 
-def delete_vidoe(video):
-    pass
+def delete_vidoe(videos):
+    list_all_videos(videos)
+    index = int(input('enter the video number to be deleted'))
+
+    if 1<= index <= len(videos):
+        del videos[index-1]
+        save_data_helper(videos)
+    else :
+        print('invalid video index')
 
 def load_data():
     try:
