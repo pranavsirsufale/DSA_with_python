@@ -3,7 +3,7 @@ import json
 
 def list_all_videos(videos):
     for index,video in enumerate(videos,start=1):
-        print(f'{index} and video is {video}')
+        print(f'{index} and  is {video.name} , Duration : {video.time}')
 
 def add_video(videos):
     name = input('Etner video name : ')
