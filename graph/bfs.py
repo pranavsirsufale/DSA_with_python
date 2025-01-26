@@ -1,15 +1,14 @@
 from collections import deque
 #! BFS from given source s 
 def bfs(adj,s,visited):
-    print(s)
     q = deque()
     #? Mark the source node as visited and enqueue it 
     visited[s] = True 
     q.append(s)
     while q:
         curr = q.popleft()  # dequeue a vertext
-        print(curr)
         print(curr,end=' ')
+        
         # Get all adjacent verteces of curr 
         for x in adj[curr]:
             if not visited[x]:
@@ -18,7 +17,6 @@ def bfs(adj,s,visited):
 
 #! Function to add and edge to the graph 
 def add_edge(adj,u,v):
-    print('EDGE U AND V :::::', u, v )
     adj[u].append(v)
     adj[v].append(u) #? Undirected graph
 
