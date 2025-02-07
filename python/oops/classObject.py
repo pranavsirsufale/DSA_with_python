@@ -55,7 +55,7 @@ class Car:
         return 'cars are means of transport '
 
 
-    # makes the property read only
+    #//? makes the property read only and the method will act like a variable but  read only
     @property
     def model(self):
         return self.__model
