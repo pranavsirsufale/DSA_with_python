@@ -6,8 +6,16 @@
 # Q2 > Create an ElectricCar class that inherits from the Car class and has an additional attribute battery size
 
 
-# Q3 >>> Encapsulation
+# Q3 >>> Encapsulation   ( USING DUNDER OPERATOR CAN MAKE ATTRIBUTES PRIVATE (ENCAPSULATE WITHIN CLASS))
+# //? APPNE CLASS KE ANDAR TO ACCESS HO PAR BAHAR ACCESS NA HO 
 # >>>> Modify the car class to encapsulate the brand attribute, making it private, and provide a getter method for it.
+
+ 
+
+# Q4 >>> POLIMORPHISM 
+#//! Q ) Demonstrate polymorphism by defining a method fuel_type in both Car and ElectricCar classes , but with different behaviours.
+
+
 
 
 
