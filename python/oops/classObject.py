@@ -24,7 +24,8 @@
 #???! add a static method to the Car class that returns a general description of a car 
 
 
-
+#?? > Create Multiple Inheritance 
+#! Create two classes Battry and Engine . and let the ElectricCar inherit from both, demonstraing multiple inheritence
 
 
 
@@ -61,9 +62,6 @@ class Car:
         return self.__model
 
 
-
-
-
 class ElectricCar(Car):
     def __init__(self,brand,model,fuel_type):
         super().__init__(brand,model)
@@ -82,28 +80,33 @@ class ElectricCar(Car):
 
 
 
-
 objectOfCar = Car('s3','tata')
 objectElectric = ElectricCar('s4','tata nexon','electric charge') 
 
 
-print(objectElectric.getCarDetails()   )
-
-print(objectOfCar.general_description())
-
-
-
-print(Car.general_description())
-
-
-print(objectOfCar.model)
+# print(objectElectric.getCarDetails()   )
+# print(objectOfCar.general_description())
+# print(Car.general_description())
+# print(objectOfCar.model)
 
 
 
+class Battery:
+    def battery_info(self):
+        return "this is battery"
+
+class Engine:
+    def engine_info(self):
+        return "this is engine"
 
 
- 
+class ElectricCarTwo(Battery,Engine,Car):
+    pass
 
 
+my_new_tesla = ElectricCarTwo('tesla','Model S')
+    
 
+print(my_new_tesla.engine_info())
 
+    
