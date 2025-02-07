@@ -16,15 +16,26 @@
 #//! Q ) Demonstrate polymorphism by defining a method fuel_type in both Car and ElectricCar classes , but with different behaviours.
 
 
+ 
+#??!  Car count
+
+
+#??? > STATIC METHOD
+#???! add a static method to the Car class that returns a general description of a car 
 
 
 
+
+
+
+#?? A static methods is a method that belongs to a class rather than an instance of a class.
 
 class Car:
+    car_count = 0 
     def __init__(self,model,brand):
         self.__model = model
         self.__brand = brand
-
+        Car.car_count += 1
 
     def get_brand(self):
         return self.__brand + ' this is brand'
@@ -34,8 +45,14 @@ class Car:
         return f"{self.__brand} and {self.__model}"
 
 
-    def fule_type():
+    def fule_type(self):
         return 'Petrol'
+    
+
+    # this is static methods 
+    @staticmethod
+    def general_description():
+        return 'cars are means of transport '
 
 class ElectricCar(Car):
     def __init__(self,brand,model,fuel_type):
@@ -60,11 +77,17 @@ objectElectric = ElectricCar('s4','tata nexon','electric charge')
 
 print(objectElectric.getCarDetails()   )
 
+print(objectOfCar.general_description())
+
+
+
+print(Car.general_description())
 
 
 
 
 
+ 
 
 
 
