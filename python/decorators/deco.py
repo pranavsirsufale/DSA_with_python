@@ -7,9 +7,7 @@
 #??! Create a decorator to print the function name and the values of its arguments every time the function is called 
 
 
-
 import time 
-
 
 def timer(func):
     def wrapper(*args,**kwars):
@@ -29,15 +27,3 @@ def example_function(n):
 
 
 # print(example_function(2))
-
-
-
-
-
-
-
-
-
-
-
-
