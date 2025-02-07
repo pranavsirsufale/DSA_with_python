@@ -2,6 +2,12 @@
 #? Timiing function Execution
 #//! Write a decorator that measures the time a function takes to execute 
 
+
+#? Debugging Function Calls 
+#??! Create a decorator to print the function name and the values of its arguments every time the function is called 
+
+
+
 import time 
 
 
@@ -22,7 +28,7 @@ def example_function(n):
     time.sleep(n)
 
 
-print(example_function(2))
+# print(example_function(2))
 
 
 
