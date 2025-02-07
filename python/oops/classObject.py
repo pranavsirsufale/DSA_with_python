@@ -7,11 +7,13 @@ class Car:
         self.model = model
         self.brand = brand
 
+    def full_name(self):
+        return f"{self.brand} and {self.model}"
 
 
 objectOfCar = Car('s3','electric')
 
-print(objectOfCar.model   )
+print(objectOfCar.full_name()   )
 
 
 
