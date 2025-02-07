@@ -54,6 +54,16 @@ class Car:
     def general_description():
         return 'cars are means of transport '
 
+
+    # makes the property read only
+    @property
+    def model(self):
+        return self.__model
+
+
+
+
+
 class ElectricCar(Car):
     def __init__(self,brand,model,fuel_type):
         super().__init__(brand,model)
@@ -68,6 +78,8 @@ class ElectricCar(Car):
     def getCarDetails(self):
         # return f'model is : {self.__model}  , brand is : {self.__brand} , fuel type is : {self.fuel_type}'
         return f"fuel is {self.fuel_type}"
+    
+
 
 
 
@@ -82,6 +94,9 @@ print(objectOfCar.general_description())
 
 
 print(Car.general_description())
+
+
+print(objectOfCar.model)
 
 
 
