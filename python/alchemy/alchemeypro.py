@@ -25,7 +25,7 @@ class Person(Base):
 
 
     def __repr__(self):
-        return f''
+        return f'{self.ssn}, { self.firstname}, {self.gender}, {self.age}'
 
 
 
