@@ -34,10 +34,17 @@ class Car:
         return f"{self.__brand} and {self.__model}"
 
 
+    def fule_type():
+        return 'Petrol'
+
 class ElectricCar(Car):
     def __init__(self,brand,model,fuel_type):
         super().__init__(brand,model)
         self.fuel_type = fuel_type
+
+
+    def fuel_type():
+        return "Electric Charge"
         
 
     # We CANNOT ACCESS __MODEL AND __brand BECAUSE THEY ARE PRIVATE 
