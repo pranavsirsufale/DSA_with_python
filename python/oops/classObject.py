@@ -26,11 +26,8 @@ class ElectricCar(Car):
 
 
 
-
 # objectOfCar = Car('s3','tata')
 objectElectric = ElectricCar('s4','tata nexon','electric charge')
-
-
 
 
 print(objectElectric.getCarDetails()   )
