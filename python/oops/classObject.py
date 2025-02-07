@@ -10,21 +10,18 @@ class Car:
         self.model = model
         self.brand = brand
 
+
     def full_name(self):
         return f"{self.brand} and {self.model}"
-
-
 
 
 class ElectricCar(Car):
     def __init__(self,brand,model,fuel_type):
         super().__init__(brand,model)
         self.fuel_type = fuel_type
-        
 
 
     def getCarDetails(self):
-        
         return f'model is : {self.model}  , brand is : {self.brand} , fuel type is : {self.fuel_type}'
 
 
