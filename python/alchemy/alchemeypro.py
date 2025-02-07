@@ -24,6 +24,10 @@ class Person(Base):
         self.age = age 
 
 
+    def __repr__(self):
+        return f''
+
+
 
 
 
