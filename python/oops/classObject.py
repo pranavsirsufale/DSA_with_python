@@ -17,21 +17,21 @@ class Car:
 
 
 class ElectricCar(Car):
-    def __init__(self,brand, model, fuel_type):
-        self.brand = brand 
-        self.model = model
+    def __init__(self,brand,model,fuel_type):
+        super().__init__(brand,model)
         self.fuel_type = fuel_type
+        
 
 
     def getCarDetails(self):
-        super(self)   
+        
         return f'model is : {self.model}  , brand is : {self.brand} , fuel type is : {self.fuel_type}'
 
 
 
 
-objectOfCar = Car('s3','tata')
-objectElectric = ElectricCar('electric charge')
+# objectOfCar = Car('s3','tata')
+objectElectric = ElectricCar('s4','tata nexon','electric charge')
 
 
 
