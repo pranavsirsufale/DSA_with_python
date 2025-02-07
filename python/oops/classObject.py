@@ -5,14 +5,25 @@
 
 # Q2 > Create an ElectricCar class that inherits from the Car class and has an additional attribute battery size
 
+
+# Q3 >>> Encapsulation
+# >>>> Modify the car class to encapsulate the brand attribute, making it private, and provide a getter method for it.
+
+
+
+
 class Car:
     def __init__(self,model,brand):
-        self.model = model
-        self.brand = brand
+        self.__model = model
+        self.__brand = brand
+
+
+    def get_brand(self):
+        return self.__brand + ' this is brand'
 
 
     def full_name(self):
-        return f"{self.brand} and {self.model}"
+        return f"{self.__brand} and {self.__model}"
 
 
 class ElectricCar(Car):
@@ -22,12 +33,12 @@ class ElectricCar(Car):
 
 
     def getCarDetails(self):
-        return f'model is : {self.model}  , brand is : {self.brand} , fuel type is : {self.fuel_type}'
+        return f'model is : {self.__model}  , brand is : {self.__brand} , fuel type is : {self.fuel_type}'
 
 
 
-# objectOfCar = Car('s3','tata')
-objectElectric = ElectricCar('s4','tata nexon','electric charge')
+objectOfCar = Car('s3','tata')
+objectElectric = ElectricCar('s4','tata nexon','electric charge') 
 
 
 print(objectElectric.getCarDetails()   )
