@@ -1,10 +1,9 @@
 from sqlalchemy import *
-# from sqlalchemy.ext.declarative import declarative_base
-# from sqlalchemy.orm import sessionmaker,declarative_base
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
-mysql_db_url = 'mysql:///root:Pranav@123@localhost:3306/bamu'
 
-engine = create_engine(mysql_db_url)
+
 
 
 Base = declarative_base()
@@ -29,6 +28,10 @@ class Marksheet(Base):
     def __repr__(self):
         return f"ID : {self.student_id} , FIRST NAME OF STUDENT : {self.student_name} , LAST NAME OF STUDENT : {self.last_name}"
 
+
+
+mysql_db_url = 'mysql:///root:Pranav@123@localhost:3306/bamu'
+engine = create_engine(mysql_db_url,echo=True)
 
 Base.metadata.create_all(bind=engine)
 
