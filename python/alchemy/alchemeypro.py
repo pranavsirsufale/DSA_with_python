@@ -27,6 +27,22 @@ class Person(Base):
     def __repr__(self):
         return f'{self.ssn}, { self.firstname}, {self.gender}, {self.age}'
 
+
+class Thing(Base):
+    __tablename__ = 'things'
+
+    tid = Column('tid',Integer,primary_key=True)
+    description = Column('description',String)
+    owner = Column(Integer, ForeignKey=('people.ssn'))
+
+
+    def __init__(self,tid,description,owner):
+        self.tid = tid
+        self.description = description
+        self.owner = owner 
+
+
+
 ##?? connect to sqlite data base
 engine = create_engine('sqlite:///mydb.db',echo=True)
 Base.metadata.create_all(bind=engine)
