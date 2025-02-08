@@ -26,4 +26,4 @@ def example_function(n):
     time.sleep(n)
 
 
-# print(example_function(2))
+print(example_function(2))

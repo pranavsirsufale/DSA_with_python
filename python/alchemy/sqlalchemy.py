@@ -4,8 +4,6 @@ from sqlalchemy.orm import sessionmaker
 
 
 
-
-
 Base = declarative_base()
 
 
