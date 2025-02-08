@@ -41,6 +41,9 @@ class Thing(Base):
         self.description = description
         self.owner = owner 
 
+    def __repr__(self):
+        return f" {self.tid} , {self.description} , AND OWNED BY {self.owner} "
+
 
 
 ##?? connect to sqlite data base
@@ -75,12 +78,20 @@ for row in results:
 
 
 
-t1 = Thing(1,'Car',person.ssn)
-t2 = Thing(2,'Laptop',p1.ssn)
-t3 = Thing(3,'Game',p2.ssn)
-t4 = Thing(4,'Something',p3.ssn)
+# t1 = Thing(1,'Car',person.ssn)
+# t2 = Thing(2,'Laptop',p1.ssn)
+# t3 = Thing(3,'Game',p2.ssn)
+# t4 = Thing(4,'Something',p3.ssn)
 
 
-session.add_all([t1,t2,t3,t4])
+# session.add_all([t1,t2,t3,t4])
+# session.commit()
 
-session.commit()
+
+
+things = session.query(Thing).all()
+
+print(things)
+
+for row in things:
+    print(f' id : {row.tid} , DESCRIPTION : {row.description} , FOREIGN_ID : {row.owner}')
