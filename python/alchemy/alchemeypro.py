@@ -27,3 +27,24 @@ class Person(Base):
     def __repr__(self):
         return f'{self.ssn}, { self.firstname}, {self.gender}, {self.age}'
 
+##?? connect to sqlite data base
+engine = create_engine('sqlite:///mydb.db',echo=True)
+Base.metadata.create_all(bind=engine)
+Session = sessionmaker(bind=engine)
+session = Session()
+
+
+person = Person(100,'Pranav','Sirsufale', 'M',21)
+session.add(person)
+
+session.commit()
+
+
+p1 = Person(101,'Pooja','Sirsufale','F',20)
+p2 = Person(102,'Pallavi','Tadaskar','F',25)
+
+
+
+
+
+
