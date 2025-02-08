@@ -33,7 +33,7 @@ class Thing(Base):
 
     tid = Column('tid',Integer,primary_key=True)
     description = Column('description',String)
-    owner = Column(Integer, ForeignKey=('people.ssn'))
+    owner = Column(Integer, ForeignKey('people.ssn'))
 
 
     def __init__(self,tid,description,owner):
@@ -62,7 +62,25 @@ p3 = Person(103,'Rohan','Magar','M',23)
 # session.commit()
 
 
+
+
+
 results = session.query(Person).filter(Person.firstname.startswith('p') )
+
+
+
 
 for row in results:
     print(f"SSN : {row.ssn} , firstname : {row.firstname} , lastname : { row.lastname} , Gender : {row.gender}")
+
+
+
+t1 = Thing(1,'Car',person.ssn)
+t2 = Thing(2,'Laptop',p1.ssn)
+t3 = Thing(3,'Game',p2.ssn)
+t4 = Thing(4,'Something',p3.ssn)
+
+
+session.add_all([t1,t2,t3,t4])
+
+session.commit()
