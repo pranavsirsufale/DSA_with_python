@@ -46,7 +46,7 @@ p3 = Person(103,'Rohan','Magar','M',23)
 # session.commit()
 
 
-results = session.query(Person).all()
+results = session.query(Person).filter(Person.firstname.startswith('p') )
 
 for row in results:
-    print(f"SSN : {row.ssn} , firstname : {row.firstname} , lastname { row.lastname} , Gender : {row.gender}")
+    print(f"SSN : {row.ssn} , firstname : {row.firstname} , lastname : { row.lastname} , Gender : {row.gender}")
