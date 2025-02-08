@@ -35,12 +35,18 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 person = Person(100,'Pranav','Sirsufale', 'M',21)
-session.add(person)
-session.commit()
+# session.add(person)
+# session.commit()
 
 p1 = Person(101,'Pooja','Sirsufale','F',20)
 p2 = Person(102,'Pallavi','Tadaskar','F',25)
 p3 = Person(103,'Rohan','Magar','M',23)
 
-session.add_all([p1,p2,p3])
-session.commit()
+# session.add_all([p1,p2,p3])
+# session.commit()
+
+
+results = session.query(Person).all()
+
+for row in results:
+    print(f"SSN : {row.ssn} , firstname : {row.firstname} , lastname { row.lastname} , Gender : {row.gender}")
