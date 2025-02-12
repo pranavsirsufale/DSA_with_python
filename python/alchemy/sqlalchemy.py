@@ -51,5 +51,14 @@ session.add(pranav_mark)
 session.commit()
 
 
+##?? GET RECORDS 
+results = session.query(Marksheet).filter(Marksheet.student_name.startswith('p') )
+for row in results:
+    print(f"STUDENT ID: {row.student_id} , STUDENT NAME : {row.student_name} , lastname : { row.last_name}")
+
+###? getting record by  
+student = session.query(Marksheet).filter(Marksheet.student_id == 101 )
+print(student)
+
 
 print(pranav_mark)
