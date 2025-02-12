@@ -6,10 +6,12 @@ from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
-
+#! Created local Class and inherited from Base class to perform Database operations
 class Marksheet(Base):
+     #!! Table name will be marksheet
     __tablename__ = 'marksheet'
 
+    #!! Creates columns 
     student_id = Column('ID', Integer,primary_key=True)
     student_name = Column('student_name',String)
     last_name = Column('last_name',String, nullable=False)
@@ -26,6 +28,9 @@ class Marksheet(Base):
     def __repr__(self):
         return f"ID : {self.student_id} , FIRST NAME OF STUDENT : {self.student_name} , LAST NAME OF STUDENT : {self.last_name}"
 
+##?? connect to sqlite data base by usinsg create engine
+# engine = create_engine('sqlite:///mydb.db',echo=True)
+# Base.metadata.create_all(bind=engine)
 
 
 mysql_db_url = 'mysql:///root:Pranav@123@localhost:3306/bamu'
@@ -34,15 +39,17 @@ engine = create_engine(mysql_db_url,echo=True)
 Base.metadata.create_all(bind=engine)
 
 
+
 Session = sessionmaker(bind=engine)
 session = Session()
 
-
+#??? Create an Instace (Object) of The class 
 pranav_mark = Marksheet(101,'Pranav','Sirsfuale')
+##?? Add to the database ( insert record to the database)
+session.add(pranav_mark)
+##?? save the changes 
+session.commit()
+
+
 
 print(pranav_mark)
-
-
-session.add(pranav_mark)
-
-session.commit()

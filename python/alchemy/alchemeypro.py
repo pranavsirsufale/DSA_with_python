@@ -1,8 +1,11 @@
 # from sqlalchemy import create_engine, ForeignKey, column, String, Integer, CHAR
+
+#?? Import the library and dipendancies
 from sqlalchemy import *
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.declarative import declarative_base  
 from sqlalchemy.orm import sessionmaker
 # from sqlalchemy import create_engine
+
 
 #?? Base Declaration
 Base = declarative_base()
@@ -72,8 +75,6 @@ p3 = Person(103,'Rohan','Magar','M',23)
 results = session.query(Person).filter(Person.firstname.startswith('p') )
 
 
-
-
 for row in results:
     print(f"SSN : {row.ssn} , firstname : {row.firstname} , lastname : { row.lastname} , Gender : {row.gender}")
 
@@ -95,4 +96,4 @@ things = session.query(Thing).all()
 print(things)
 
 for row in things:
-    print(f' id : {row.tid} , DESCRIPTION : {row.description} , FOREIGN_ID : {row.owner}')
+    print(f' id : {row.tid} , DESCRIPTION : {row.descripti     on} , FOREIGN_ID : {row.owner}')
