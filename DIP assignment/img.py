@@ -59,7 +59,6 @@ plt.show()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-'''
 
 
 import cv2
@@ -69,6 +68,17 @@ output_gaussian=cv2.GaussianBlur(img,(5,5),0,)
 cv2.imshow("gaussian blur",output_gaussian)
 cv2.imshow("original image",img)
 cv2.waitKey(0)
+'''
 
 
+
+import cv2 
+import numpy as np
+img = cv2.imread('ai.jpg')
+
+output_median_blur = cv2.medianBlur(img,5)
+
+cv2.imshow('mediam blur', output_median_blur)
+cv2.imshow('original image ', img )
+cv2.waitKey(0)
 
