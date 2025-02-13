@@ -57,9 +57,11 @@ for record in records:
     print(f' STUDENT iD : { record.student_id} , STUDENT FIRST NAME : {record.student_name} , STUDENT LAST NAME : {record.last_name} ')
 
 
-###? getting record  
+
+###? GETTING STUDENT BY STUDENT ID
 student = session.query(Marksheet).filter(Marksheet.student_id == 101 )
 print(student)
+
 
 
 
@@ -67,6 +69,9 @@ print(student)
 results = session.query(Marksheet).filter(Marksheet.student_name.startswith('p') )
 for row in results:
     print(f"STUDENT ID: {row.student_id} , STUDENT NAME : {row.student_name} , lastname : { row.last_name}")
+
+
+
 
 
 
