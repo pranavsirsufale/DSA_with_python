@@ -62,7 +62,13 @@ cv2.destroyAllWindows()
 '''
 
 
-
+import cv2
+import numpy as np
+img=cv2.imread("road.jpg")
+output_gaussian=cv2.GaussianBlur(img,(5,5),0,)
+cv2.imshow("gaussian blur",output_gaussian)
+cv2.imshow("original image",img)
+cv2.waitKey(0)
 
 
 
