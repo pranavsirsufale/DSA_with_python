@@ -34,7 +34,6 @@ cv2.imshow('Dark Image', dark_image)
 cv2.waitKey(0)
 cv2.destroyAllwindows()
 
-'''
 
 import cv2
 import numpy as np
@@ -60,6 +59,7 @@ plt.show()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+'''
 
 
 
