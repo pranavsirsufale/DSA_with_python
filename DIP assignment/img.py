@@ -210,8 +210,3 @@ cv2.destroyAllWindows()
 
 
 
-
-
-
-
-
