@@ -98,7 +98,6 @@ cv2.imshow('original image', img)
 cv2.waitKey(0)
 
 
-'''
 
 import cv2 
 import numpy as np
@@ -121,3 +120,5 @@ plt.title('Newly Brightned Image ')
 
 plt.tight_layout()
 plt.show()
+
+'''
