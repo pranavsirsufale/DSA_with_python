@@ -27,8 +27,16 @@ texts = [
 ]
 
 
+#?? Compute polarity for each text
+print('Polarity using Text Blob and VADER.')
 
+for text in texts:
+    tb_polarity = polarity_textblob(text)
+    vader_polarity = polarity_vader(text)
 
+    print(f'Text : {text}')
+    print(f' TextBlob polarity {tb_polarity}')
+    print(f'VADER Polarity : {vader_polarity}')
 
 
 
