@@ -121,7 +121,6 @@ plt.title('Newly Brightned Image ')
 plt.tight_layout()
 plt.show()
 
-'''
 
 
 import cv2
@@ -140,3 +139,4 @@ axis[0,2].set_title('sobel y image')
 axis[0,2].axis('off')
 plt.show()
 cv2.waitKey()
+'''
