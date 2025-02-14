@@ -147,7 +147,21 @@ cv2.waitKey()
 
 
 
-
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+img = cv2.imread('cam.jpg')
+img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+gradient_sobelx = cv2.Sobel(img,-1,1,0)
+fig,axis = plt.subplots(2,3,figsize=(10,5))
+axis[0,0].imshow(img)
+axis[0,0].set_title('Original image')
+axis[0,0].axis('off')
+axis[0,1].imshow(gradient_sobelx)
+axis[0,1].set_title('soble x image')
+axis[0,1].axis('off')
+plt.show()
+cv2.waitKey()
 
 
 
