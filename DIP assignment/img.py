@@ -179,5 +179,22 @@ cv2.waitKey()
 
 '''
 
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+def plot_histogram(img,title):
+    hist=cv2.calcHist([img],[0],None,[256],[0,255])
+    plt.plot(hist)
+bright = cv2.imread('fish.jpg',0)
+dark = cv2.imread('skel.jpg',0)
 
+plt.figure(figsize=(10,6))
+plt.subplot(2,2,1)
+plot_histogram(bright,"bright")
+plt.title("bright image histogram")
+plt.subplot(2,2,2)
+plot_histogram(dark,"dark")
+plt.title("dark image histogram")
+plt.tight_layout()
+plt.show()
 
