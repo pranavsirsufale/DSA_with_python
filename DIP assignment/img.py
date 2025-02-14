@@ -82,8 +82,6 @@ cv2.imshow('original image ', img )
 cv2.waitKey(0)
 
 
-
-
 output_bilateral = cv2.bilateralFilter(img,5,6,6)
 cv2.imshow('bilateral filter',output_bilateral)
 
@@ -93,25 +91,11 @@ cv2.waitKey(0)
 
 
 
-
-
-
-
-
-
 img = cv2.imread('aiim.jfif')
 output_gaussian = cv2.GaussianBlur(img,(5,5), 0 )
 cv2.imshow('gaussian blur',output_gaussian )
 cv2.imshow('original image', img)
 cv2.waitKey(0)
-
-
-
-
-
-
-
-
 
 
 '''
