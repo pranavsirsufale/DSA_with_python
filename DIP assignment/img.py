@@ -68,7 +68,6 @@ output_gaussian=cv2.GaussianBlur(img,(5,5),0,)
 cv2.imshow("gaussian blur",output_gaussian)
 cv2.imshow("original image",img)
 cv2.waitKey(0)
-'''
 
 
 
@@ -82,3 +81,5 @@ cv2.imshow('mediam blur', output_median_blur)
 cv2.imshow('original image ', img )
 cv2.waitKey(0)
 
+
+'''
