@@ -82,4 +82,59 @@ cv2.imshow('original image ', img )
 cv2.waitKey(0)
 
 
+
+
+output_bilateral = cv2.bilateralFilter(img,5,6,6)
+cv2.imshow('bilateral filter',output_bilateral)
+
+## ORIGINAL IMAGE
+cv2.imshow('original image',img)
+cv2.waitKey(0)
+
+
+
+
+
+
+
+
+
+img = cv2.imread('aiim.jfif')
+output_gaussian = cv2.GaussianBlur(img,(5,5), 0 )
+cv2.imshow('gaussian blur',output_gaussian )
+cv2.imshow('original image', img)
+cv2.waitKey(0)
+
+
+
+
+
+
+
+
+
+
+
+import cv2 
+import numpy as np
+import matplotlib.pyplot as plt
+
+dark_img = cv2.imread('fish dark.png')
+brightening_factor = 50
+
+bright_img = np.clip(dark_img + brightening_factor , 0 , 255 ).astype(np.uint8)
+
+plt.figure(figsize = (10 , 6 ) )
+
+plt.subplot(1,2,1)
+plt.imshow(cv2.cvtColor(dark_img.cv2.COLOR_BGR2RGB))
+plt.title('Original Dark Image ')
+
+plt.subplot(1,2,2)
+plt.imshow(cv2.cvtColor(dark_img , cv2.COLOR_BGR2RGB))
+plt.title('Newly Brightned Image ')
+
+plt.tight_layout()
+plt.show()
+
 '''
