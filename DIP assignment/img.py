@@ -177,7 +177,6 @@ axis[1,1].axis('off')
 plt.show()
 cv2.waitKey()
 
-'''
 
 import cv2
 import numpy as np
@@ -197,4 +196,5 @@ plot_histogram(dark,"dark")
 plt.title("dark image histogram")
 plt.tight_layout()
 plt.show()
+'''
 
