@@ -159,8 +159,6 @@ axis[0,1].axis('off')
 plt.show()
 cv2.waitKey()
 
-'''
-
 
 import cv2
 import numpy as np
@@ -179,6 +177,7 @@ axis[1,1].axis('off')
 plt.show()
 cv2.waitKey()
 
+'''
 
 
 
