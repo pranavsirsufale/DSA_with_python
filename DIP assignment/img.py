@@ -197,4 +197,12 @@ plt.title("dark image histogram")
 plt.tight_layout()
 plt.show()
 '''
-
+import cv2
+image = cv2.imread('skel.jpg', 0)
+# Load as grayscale (0)
+threshold_value = 127
+_, thresholded_image = cv2.threshold(image, threshold_value, 255, cv2.THRESH_BINARY)
+cv2.imshow('Original Image', image)
+cv2.imshow('Thresholded Image', thresholded_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
