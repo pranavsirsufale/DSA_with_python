@@ -47,3 +47,47 @@ if __name__ == '__main__':
 
     print("BFS Traversal:")
     bfs(adj, v)
+
+
+#############################
+
+
+import queue
+def addEdge(adj, u, v):
+    adj[u].append(v)
+    adj[v].append(u) 
+
+def BFSUtils(u, adj, visited):
+    q = queue.Queue()
+
+    visited[u] = True
+    q.put(u)
+
+    while not q.empty():
+        u = q.get()
+        print(u, end=' ')
+
+        for i in range(len(adj[u])):
+            if not visited[adj[u][i]]:
+                visited[adj[u][i]] = True
+                q.put(adj[u][i])
+
+def bfs(adj, v):
+    visited = [False] * v
+    for u in range(v):
+        if not visited[u]:
+            BFSUtils(u, adj, visited)
+
+if __name__ == '__main__':
+    v = 5  
+    adj = [[] for _ in range(v)]
+    
+    addEdge(adj, 0, 4)
+    addEdge(adj, 1, 2)
+    addEdge(adj, 1, 3)
+    addEdge(adj, 1, 4)
+    addEdge(adj, 2, 3)
+    addEdge(adj, 3, 4)
+
+    print("BFS Traversal:")
+    bfs(adj, v)
