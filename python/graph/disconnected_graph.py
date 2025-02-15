@@ -47,4 +47,14 @@ def bfs(adj,v):
             BFSUtils(u,adj,visited)
 
 
-###
+### Driver code 
+if __name__ == '__main__':
+    print(__name__)
+    v = 5 
+    adj = [[] for _ in range(v)]
+    addEdge(adj,0,4)
+    addEdge(adj,1,2)
+    addEdge(adj,1,3)
+    addEdge(adj,1,4)
+    addEdge(adj,2,3)
+    addEdge(adj,3,4)
