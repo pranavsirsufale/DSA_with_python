@@ -2,11 +2,11 @@
 class Graph:
     def __init__(self,vertices):
         # Adjacency list
-        self.adj == [[] for _ in range(vertices)]
+        self.adj = [[] for _ in range(vertices)]
 
-    def addEdge(self,s,t):
-        self.adj[s].append(t)
-        self.adj[t].append(s)
+    def addEdge(self,s,d):
+        self.adj[s].append(d)
+        self.adj[d].append(s)
 
     def dfs_rec(self,visited,s):
         visited[s] = True
@@ -29,7 +29,21 @@ class Graph:
 
 
 
+if __name__ == "__main__":
+    v = 6 ###?? Number of vertext
+    graph = Graph(v)
 
+    # Define the edge of the graph 
+    edges = [(1,2), (2,0), (0,3), (4,5)]
+
+    ### Populate the adjacency lis twith edge
+    for edge in edges:
+        graph.addEdge(edge[0], edge[1])
+
+    print('complete DFS of the graph ')
+    graph.dfs()
+
+    
 
 
 
