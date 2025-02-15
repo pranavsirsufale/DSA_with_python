@@ -19,7 +19,7 @@ def polarity_vader(text):
 
 
 texts = [
-    'I love this product ! It\'s absolutely amazing. ',
+    'I love this product ! Its absolutely amazing. ',
     "this is the worst movie I have ever seen.",
     "The food was okay, nothing Special ",
     "I am so happy today!",
