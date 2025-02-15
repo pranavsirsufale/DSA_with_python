@@ -58,3 +58,46 @@ if __name__ == '__main__':
     addEdge(adj,1,4)
     addEdge(adj,2,3)
     addEdge(adj,3,4)
+
+
+
+#*******************************************************************************
+
+import queue
+def addEdge(adj,u,v):
+    adj[u].append(v)
+
+def BFSUtils(u,adj,visited):
+    q = queue.Queue()
+    visited[u] = True
+    q.put(u)
+
+    while ( not q.empty() ):
+        ####? Dequeue a vertext from queue and print it
+        u = q.queue[0]
+        print(u,end = ' ')
+        q.get()
+
+        i = 0 
+        while i != len(adj[u]):
+            if ( not visited[adj][u][i]):
+                visited[adj[u][i]] = True
+                q.put(adj[u][i])
+            i += 1 
+
+def bfs(adj,v):
+    visited = [False] * v
+    for u in range(v):
+        if ( visited[u] ==  False) :
+            BFSUtils(u,adj,visited)
+
+if __name__ == '__main__':
+    print(__name__)
+    v = 5 
+    adj = [[] for _ in range(v)]
+    addEdge(adj,0,4)
+    addEdge(adj,1,2)
+    addEdge(adj,1,3)
+    addEdge(adj,1,4)
+    addEdge(adj,2,3)
+    addEdge(adj,3,4)
