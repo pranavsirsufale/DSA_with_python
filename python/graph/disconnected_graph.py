@@ -30,4 +30,21 @@ def BFSUtils(u,adj,visited):
         q.get()
 
         ### Get all adjacency verteces of the 
-        # deque vrtext s if an adjacent # has not been visited then mark 
+        # deque vrtext s if an adjacent # has not been visited then mark it visited and enque it 
+        i = 0 
+        while i != len(adj[u]):
+            if ( not visited[adj][u][i]):
+                visited[adj[u][i]] = True
+                q.put(adj[u][i])
+            i += 1 
+
+# This funciton does BFS utils () for all unvisited vertex
+
+def bfs(adj,v):
+    visited = [False] * v
+    for u in range(v):
+        if ( visited[u] ==  False) :
+            BFSUtils(u,adj,visited)
+
+
+###
