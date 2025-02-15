@@ -1,0 +1,33 @@
+'''
+IN CASE OF DISCONNECTED GRAPH OF ANY VERTEX THAT IS UNREACHABLE FROM ALL VERTEX, THE PREVIOUS 
+EXAMPLE WILL NOT GIVE OUTPUT 
+
+JUST TO MODIFY BFS PERFORM SIMPLE BFS FROM EACH UNVISITED VERTEXT OF GIVEN GRAPH 
+
+'''
+import queue
+# A utility function to add an edge
+# in an undirected graph 
+def addEdge(adj,u,v):
+    adj[u].append(v)
+
+
+#?? A utility function to do BFS of 
+#?? grpah from a given vertext u
+def BFSUtils(u,adj,visited):
+    q = queue.Queue()
+
+    ### Mark the current node as visited 
+    # and enqueue it 
+    visited[u] = True
+    q.put(u)
+
+    ### i will be used to get all adjacent vertextes 4 of a vertext us 
+    while ( not q.empty() ):
+        ####? Dequeue a vertext from queue and print it
+        u = q.queue[0]
+        print(u,end = ' ')
+        q.get()
+
+        ### Get all adjacency verteces of the 
+        # deque vrtext s if an adjacent # has not been visited then mark 
