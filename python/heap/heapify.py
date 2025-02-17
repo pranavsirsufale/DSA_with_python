@@ -37,10 +37,10 @@ def printArray(arr, n ):
     for i in range(n):
         print(arr[i], end = ' ')
     print()
-
+ 
 
 if __name__ == '__main__':
-    arr = [ 10,1,21,51,51,61,61,,651,651,65,416]
+    arr = [ 10,1,21,51,51,61,61,651,651,65,416]
 
     n = len(arr)
     deleteRoot(arr)
