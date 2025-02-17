@@ -1,0 +1,25 @@
+# to heapify a subtree rooted to node which is 
+# an index of arr[] adn dn is the size of heap 
+
+def heapify(arr, n , i ):
+    largest = i 
+    l = 2*i + 1
+    r = 2*i + 2 
+
+    # if left child is largest than root 
+    if ( l < n and arr[l] > arr[largest] ) : 
+        largest = l 
+
+
+    # if the right is larger 
+    if ( r < n and arr[r] > arr[largest]) : 
+        largest = r 
+
+    # if root is not larger 
+    if ( largest != i ):
+        arr[i] , arr[largest] = arr[largest] , arr[i] 
+
+        ### ! recursively heapify the affected subtree
+        heapify(arr,n,largest)
+
+
