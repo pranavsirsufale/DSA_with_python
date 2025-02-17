@@ -19,3 +19,16 @@ def heapify(arr,n , i ):
 
             # Recursively heapify the paretnode 
             heapify(arr,n,parent)
+
+
+def insertNode(arr, key):
+    global n 
+    
+    # Increase the size of heap by 1 
+
+    n += 1
+    # insert the element at end of heap 
+    arr.append(key)
+
+    # Heapify the new node following a Bottom up approach 
+    heapify(arr, n , n -1 )
