@@ -32,3 +32,19 @@ def insertNode(arr, key):
 
     # Heapify the new node following a Bottom up approach 
     heapify(arr, n , n -1 )
+
+
+def printArray(arr,n):
+    for i in range(n):
+        print(arr[i] , end = ' ')
+    print()
+
+
+arr = [4,64,6,41,5,16,51,6,1,6,1,51,56,4,894,8,146,61,64,98,41,8]
+
+n = len(arr)
+key = 416
+
+insertNode(arr,key)
+
+printArray(arr,n)
