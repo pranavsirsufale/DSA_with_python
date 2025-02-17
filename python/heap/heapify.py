@@ -5,11 +5,9 @@ def heapify(arr, n , i ):
     largest = i 
     l = 2*i + 1
     r = 2*i + 2 
-
     # if left child is largest than root 
     if ( l < n and arr[l] > arr[largest] ) : 
         largest = l 
-
 
     # if the right is larger 
     if ( r < n and arr[r] > arr[largest]) : 
@@ -18,8 +16,23 @@ def heapify(arr, n , i ):
     # if root is not larger 
     if ( largest != i ):
         arr[i] , arr[largest] = arr[largest] , arr[i] 
-
         ### ! recursively heapify the affected subtree
         heapify(arr,n,largest)
 
+
+#function to delte the root from heap 
+def deleteRoot(arr):
+    global n 
+    ### Get the last element 
+    lastElement = arr[n-1]
+
+    ## Replace root with last element
+    arr[0] = lastElement
+
+    # decrease the size of heap by 1
+    n -= 1
+    heapify(arr, n , 0 )
+
+
+    
 
