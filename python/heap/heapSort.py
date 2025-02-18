@@ -21,6 +21,26 @@ def heapify(arr,n,i):
         ##!!!! Recursively heapify the 
 
         heapify(arr,n,largest)
+
+
+# main function to do heap sort
+def heapSort(arr):
+    n = len(arr)
+
+    # Build heap ( rearrange array )
+    for i in range(n // 2 -1 , -1 , -1):
+        heapify(arr,n,i)
+
+    # one by one extracdt an element from heap 
+    for i in range(n-1 , 0 , -1):
+        ### Move root to end 
+        arr[0],arr[i] = arr[i],arr[0] 
+
+        ### Call max heapfify on the reduced heap 
+        heapify(arr,i,0) 
+
+
+        
         
 
 
