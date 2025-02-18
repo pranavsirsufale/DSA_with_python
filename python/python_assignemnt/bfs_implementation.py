@@ -18,7 +18,8 @@ def bfs(graph,start):
             print(node , end = ' ')
             visited.append(node)
             for neighbor in graph[node]:
-                queue.append(neighbor)
+                if neighbor not in visited:
+                    queue.append(neighbor)
 
 graph = {
 'A': ['B', 'C'],
