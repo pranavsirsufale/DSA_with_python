@@ -29,6 +29,4 @@ graph = {
     'f' : [ 'c','e']
 }
 
-
 bfs(graph , 'a')
-
