@@ -40,9 +40,18 @@ def heapSort(arr):
         heapify(arr,i,0) 
 
 
-        
-        
 
+        
+def printArray(arr):
+    print(end='| ')
+    for i in arr:
+        print(i, end = ' | ')
+    print()
+
+arr = [9,4,3,8,1,464,64,1,496,165,418,96,641,984,6525,5641,2,848,5]
+heapSort(arr)
+print('sorted array is ')
+printArray(arr) 
 
 
 
