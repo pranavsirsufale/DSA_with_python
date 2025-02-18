@@ -28,8 +28,3 @@ graph = {
 'F': ['C', 'E']
 }
 dfs(graph,'A')
-
-
-
-
-
