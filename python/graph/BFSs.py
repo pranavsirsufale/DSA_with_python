@@ -18,6 +18,22 @@ def add_edge(adj,u,v):
 def bfs_disconnected(adj):
     visited = [False] * len(adj)
 
+    for i in range(len(adj)):
+        if not visited[i]:
+            bfs(adj,i,visited)
+
+
+### Example usage
+v = 6 
+adj = [ [] for _ in range(v)] ### Adjacancy list
+
+add_edge(adj,0, 1)
+add_edge(adj,0, 2)
+add_edge(adj,3,4)
+add_edge(adj,4,5)
+
+bfs_disconnected(adj)
+
 
 
 
