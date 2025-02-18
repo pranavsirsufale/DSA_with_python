@@ -1,5 +1,3 @@
-
-
 '''
 #? 1 ] Find the smallest element in the unsorted part.
 
@@ -7,4 +5,3 @@
 
 #? 3 ] Move the boundary between sorted and unsorted parts.
 '''
-
