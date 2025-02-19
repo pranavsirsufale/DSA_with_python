@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
 
 df = pd.read_csv('ML/placement-dataset.csv')
 
@@ -34,7 +35,7 @@ df = df.iloc[:,1:]
 
 
 plt.scatter(df['cgpa'],df['iq'],c=df['placement'])
-plt.show()
+# plt.show()
 
 ### classify using linear regression
 
@@ -61,4 +62,17 @@ clf = LogisticRegression()
 
 #### Model training
 
-clf.fit(X_train,y_train)
+fitt = clf.fit(X_train,y_train)
+
+
+# print(fitt)
+
+y_pred = clf.predict(X_test)
+
+
+print(y_pred)
+
+
+score = accuracy_score(y_test,y_pred)
+
+print(score)
