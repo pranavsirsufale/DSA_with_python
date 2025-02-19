@@ -3,7 +3,9 @@ import pandas as pd
 
 df = pd.read_csv('ML/placement-dataset.csv')
 
-print(df.head())
+# print(df.info())
+
+# print(df.head())
 
 df = df.iloc[:,1:]
 # print('_____________MAXIMUM ------------------------------')
@@ -23,3 +25,5 @@ df = df.iloc[:,1:]
 ###? 4. TRAIN THE MODEL
 ###? 5. EVALUATE THE MODEL/MODEL SELECTION
 ###? 6 . DEPLOY THE MODEL 
+
+
