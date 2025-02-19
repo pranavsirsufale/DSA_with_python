@@ -50,29 +50,25 @@ y = df.iloc[:,-1]
 ############ ( independent , dependent , size )
 X_train , X_test , y_train, y_test = train_test_split(X, y, test_size= 0.1, )
 
-
 scaler = StandardScaler() 
 
 X_train = scaler.fit_transform(X_train)
 
 X_test = scaler.transform(X_test)
-
-
 clf = LogisticRegression() 
 
 #### Model training
-
 fitt = clf.fit(X_train,y_train)
 
-
 # print(fitt)
-
 y_pred = clf.predict(X_test)
 
-
 print(y_pred)
-
 
 score = accuracy_score(y_test,y_pred)
 
 print(score)
+
+from mlxtend.plotting import plot_decision_regions
+
+plot_decision_regions(X_train, y_train.values, clf = clf, legend=2)
