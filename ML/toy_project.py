@@ -42,6 +42,8 @@ plt.scatter(df['cgpa'],df['iq'],c=df['placement'])
 ### Indipendent variables
 X = df.iloc[:,0:2]
 
+
+
 # dependent variable
 y = df.iloc[:,-1]
 
