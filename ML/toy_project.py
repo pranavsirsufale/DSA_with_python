@@ -1,5 +1,7 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
 df = pd.read_csv('ML/placement-dataset.csv')
 
@@ -25,5 +27,24 @@ df = df.iloc[:,1:]
 ###? 4. TRAIN THE MODEL
 ###? 5. EVALUATE THE MODEL/MODEL SELECTION
 ###? 6 . DEPLOY THE MODEL 
+
+
+
+
+plt.scatter(df['cgpa'],df['iq'],c=df['placement'])
+plt.show()
+
+### classify using linear regression
+
+### Indipendent variables
+X = df.iloc[:,0:2]
+
+# dependent variable
+y = df.iloc[:,-1]
+
+####?? Scale the values 
+
+############ ( independent , dependent , size )
+X_train , X_test , y_train, y_test = train_test_split(X, y, test_size= 0.1, )
 
 
