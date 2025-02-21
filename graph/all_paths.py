@@ -13,9 +13,7 @@ class Graph:
         # Mark the current node as visited and store in path
         visited[u] = True
         path.append(u)
-
         # If current vertex is same as destination , then print
-
         # Current path []
         if u == d :
             print(path)
@@ -23,18 +21,12 @@ class Graph:
             for i in self.graph[u]:
                 if visited[i] == False:
                     self.printAllPathsUtil(i,d,visited,path)
-
         path.pop()
         visited[u] = False
-
-
         def printAllPaths(self,s,d):
             visited = [False] * self.v
             path = []
-
             self.printAllPathsUtil(s,d,visited,path)
-
-
 
 g = Graph(4) 
 
@@ -45,4 +37,3 @@ g.addEdge(2,1)
 g.addEdge(1,3)
 s = 2; d = 3
 g.printAllPaths(s,d)
-
