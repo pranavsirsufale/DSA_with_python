@@ -23,10 +23,11 @@ class Graph:
                     self.printAllPathsUtil(i,d,visited,path)
         path.pop()
         visited[u] = False
-        def printAllPaths(self,s,d):
-            visited = [False] * self.v
-            path = []
-            self.printAllPathsUtil(s,d,visited,path)
+        
+    def printAllPaths(self,s,d):
+        visited = [False] * self.v
+        path = []
+        self.printAllPathsUtil(s,d,visited,path)
 
 g = Graph(4) 
 
