@@ -1,3 +1,4 @@
+'''
 from collections import deque
 #! BFS from given source s 
 def bfs(adj,s,visited):
@@ -37,3 +38,34 @@ add_edge(adj,0,2)
 add_edge(adj,3,4)
 add_edge(adj,4,5)
 bfs_disconnected(adj)
+
+
+'''
+
+
+
+from collections import deque
+
+def bfs(graph,start):
+    visited = set()
+    queue = deque([start])
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            print(node , end = ' ')
+            visited.add(node)
+            for neighbor in graph[node]:
+                if neighbor not in visited:
+                    queue.append(neighbor)
+
+
+graph = {
+'A': ['B', 'C'],
+'B': ['A', 'D', 'E'],
+'C': ['A', 'F'],
+'D': ['B'],
+'E': ['B', 'F'],
+'F': ['C', 'E']
+}
+
+bfs(graph,'A')
