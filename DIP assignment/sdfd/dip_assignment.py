@@ -73,7 +73,7 @@ output_gaussian = cv2.GaussianBlur(img,(5,5),0)
 cv2.imshow('Gaussian Blur', output_gaussian)
 cv2.imshow('original Img ', img)
 cv2.waitKey(0)
-'''
+
 
 img = cv2.imread(path)
 output_median_blur = cv2.medianBlur(img,5)
@@ -81,6 +81,37 @@ output_median_blur = cv2.medianBlur(img,5)
 cv2.imshow('median blured image ', output_median_blur)
 cv2.imshow('Original image ', img)
 cv2.waitKey(0)
+
+
+img = cv2.imread(path)
+output_bilateral = cv2.bilateralFilter(img,5,6,6)
+cv2.imshow('bilateral fiber',output_bilateral)
+
+## ORIGINAL IMAGE
+cv2.imshow('original image ', img)
+cv2.waitKey(0)
+'''
+import matplotlib.pyplot as plt
+img = cv2.imread(path)
+img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+gradient_sobely = cv2.Sobel(img,-1,0,1)
+
+fig,axis = plt.subplots(2,3,figsize=(10,5))
+
+axis[0,0].imshow(img)
+axis[0,0].set_title('Original image ')
+axis[0,0].axis('off')
+
+axis[0,2].imshow(gradient_sobely)
+axis[0,2].set_title('image')
+axis[0,2].axis('off')
+plt.show()
+cv2.waitKey(0)
+
+
+
+
+
 
 
 
