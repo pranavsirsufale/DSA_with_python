@@ -9,12 +9,14 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 
-#### IMAGE COMPRESSION AND STORAGE 
 
 
 
 '''
-
-
+#### IMAGE COMPRESSION AND STORAGE 
+import cv2
+img = cv2.imread('F:/DSA/practical/DIP assignment/sdfd/cam.jpg',1)
+compressed_img_param = [cv2.IMWRITE_JPEG_QUALITY,50]
+cv2.imwrite('F:/DSA/practical/DIP assignment/sdfd/image_name_of_compressed_image.jpg',img,compressed_img_param)
 
 
