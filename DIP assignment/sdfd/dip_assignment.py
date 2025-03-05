@@ -65,7 +65,7 @@ plt.tight_layout()
 plt.show()
 cv2.waitKey()
 cv2.destroyAllWindows()
-'''
+
 
 ## TAKE AN IMAGE AND APPLY GAUSSIAN BLUR FILTER ON IT TO SHARP THE IAMGE .
 img = cv2.imread(path)
@@ -73,7 +73,14 @@ output_gaussian = cv2.GaussianBlur(img,(5,5),0)
 cv2.imshow('Gaussian Blur', output_gaussian)
 cv2.imshow('original Img ', img)
 cv2.waitKey(0)
+'''
 
+img = cv2.imread(path)
+output_median_blur = cv2.medianBlur(img,5)
+
+cv2.imshow('median blured image ', output_median_blur)
+cv2.imshow('Original image ', img)
+cv2.waitKey(0)
 
 
 
