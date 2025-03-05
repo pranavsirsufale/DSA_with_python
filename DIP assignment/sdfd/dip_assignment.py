@@ -1,4 +1,5 @@
 path = 'F:/DSA/practical/DIP assignment/sdfd/cam.jpg'
+fish = 'F:/DSA/practical/DIP assignment/sdfd/fish dark.jpg'
 import cv2
 import numpy as np
 '''
@@ -42,12 +43,12 @@ cv2.imshow("ORIGINAL IMAGE", bright_img)
 cv2.imshow('DARK IMAGE ', dark_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-'''
+
 
 ## cONVERT DARK IMAGE INTO BRIGHT IMAGE
 import matplotlib.pyplot as plt
 
-dark_img = cv2.imread(path)
+dark_img = cv2.imread(fish)
 brightening_factor = 50
 bright_img = np.clip(dark_img + brightening_factor , 0 , 255).astype(np.uint8)
 plt.figure(figsize = (10, 6))
@@ -57,13 +58,23 @@ plt.imshow(cv2.cvtColor(dark_img, cv2.COLOR_BGR2RGB))
 plt.title('dark image ')
 
 plt.subplot(1,2,2)
-plt.imshow(cv2.cvtColor(dark_img,cv2.COLOR_BGR2RGB))
-plt.title('brightend image')
+plt.imshow(cv2.cvtColor(bright_img,cv2.COLOR_BGR2RGB))
+plt.title('Newly Brighted image')
 
 plt.tight_layout()
 plt.show()
 cv2.waitKey()
 cv2.destroyAllWindows()
+'''
+
+## TAKE AN IMAGE AND APPLY GAUSSIAN BLUR FILTER ON IT TO SHARP THE IAMGE .
+img = cv2.imread(path)
+output_gaussian = cv2.GaussianBlur(img,(5,5),0)
+cv2.imshow('Gaussian Blur', output_gaussian)
+cv2.imshow('original Img ', img)
+cv2.waitKey(0)
+
+
 
 
 
