@@ -19,13 +19,40 @@ img = cv2.imread('F:/DSA/practical/DIP assignment/sdfd/cam.jpg',1)
 compressed_img_param = [cv2.IMWRITE_JPEG_QUALITY,50]
 cv2.imwrite('F:/DSA/practical/DIP assignment/sdfd/image_name_of_compressed_image.jpg',img,compressed_img_param)
 
-'''
+
 
 
 import numpy as np
 img = cv2.imread(path,0)
 denoised = cv2.GaussianBlur(img,(5,5),0)
-cv2.imshow('original Image ' , img)
+cv2.imshow('noisy Image ' , img)
 cv2.imshow('denoised image ',denoised)
 if cv2.waitKey() == ord('q'):
     cv2.destroyAllWindows()
+'''
+
+
+bright_img = cv2.imread('F:/DSA/practical/DIP assignment/sdfd/cam.jpg')
+darkening_factor = 50
+dark_img = cv2.subtract(bright_img, darkening_factor)
+dark_img = cv2.max(dark_img,0)
+
+cv2.imshow("ORIGINAL IMAGE", bright_img)
+cv2.imshow('DARK IMAGE ', dark_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
