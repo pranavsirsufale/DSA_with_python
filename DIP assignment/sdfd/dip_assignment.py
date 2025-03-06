@@ -170,6 +170,16 @@ plt.show()
 
 '''
 
+img = cv2.imread('F:/DSA/practical/DIP assignment/skel.jpg', 0 )
+# Load as grayscale ( 0 )
+threshold_value = 127
+_, threshold_image = cv2.threshold(img, threshold_value, 255, cv2.THRESH_BINARY)
+
+cv2.imshow('Original Image ', img)
+cv2.imshow('Threshold Image ',threshold_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
 
 
 
