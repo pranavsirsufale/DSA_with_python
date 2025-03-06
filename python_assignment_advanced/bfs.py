@@ -10,8 +10,6 @@ def bfs(graph,start):
             for neighbor in graph[node]:
                 if neighbor not in visited:
                     queue.append(neighbor)
-
-
 graph = {
 'A': ['B', 'C'],
 'B': ['A', 'D', 'E'],
@@ -20,6 +18,4 @@ graph = {
 'E': ['B', 'F'],
 'F': ['C', 'E']
 }
-
-
 bfs(graph,'A')
