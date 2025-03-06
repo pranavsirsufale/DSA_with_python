@@ -126,9 +126,6 @@ axis[0,1].axis('off')
 
 plt.show()
 cv2.waitKey(0)
-'''
-
-
 
 
 import matplotlib.pyplot as plt
@@ -149,7 +146,29 @@ plt.show()
 cv2.waitKey(0)
 
 
+import matplotlib.pyplot as plt
 
+def plot_histogram(img,title):
+    hist = cv2.calcHist([img],[0],None,[256],[0,255])
+    plt.plot(hist)
+
+
+bright = cv2.imread(path,0)
+dark = cv2.imread('F:/DSA/practical/DIP assignment/skel.jpg',0)
+
+plt.figure(figsize = (10,6))
+plt.subplot(2,2,1)
+plot_histogram(bright, 'Brightend ' )
+plt.title('bright image histogram ')
+
+plt.subplot(2,2,2)
+plot_histogram(dark,'dark image ')
+
+plt.title('ttitle of the image ')
+plt.tight_layout()
+plt.show()
+
+'''
 
 
 
