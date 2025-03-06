@@ -117,7 +117,16 @@ img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 gradient_sobelx = cv2.Sobel(img,-1,1,0)
 fig,axis = plt.subplots(2,3,figsize = (10,5))
 
-axis = 
+axis[0,0].imshow(img)
+axis[0,0].set_title('Original image')
+axis[0,0].axis('off')
+
+axis[0,1].imshow(gradient_sobelx)
+axis[0,1].set_title('Sobel x image')
+axis[0,1].axis('off')
+
+plt.show()
+cv2.waitKey(0)
 
 
 
