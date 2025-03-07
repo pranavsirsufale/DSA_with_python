@@ -90,7 +90,7 @@ def heap_sort(arr):
 arr = [12,11, 13, 5,6 ,6, 6, 66,53,3]
 heap_sort(arr)
 print(arr)
-'''
+
 
 ### insertion sort 
 def insertion_sort(arr):
@@ -106,6 +106,57 @@ def insertion_sort(arr):
 arr = [12, 11, 13, 5, 6]
 insertion_sort(arr)
 print(arr)      
+
+
+
+#### selection sort
+def selection_sort(arr):
+    for i in range(len(arr)):
+        min_idx = i
+        for j in range(i+ 1 ,len(arr)):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i],arr[min_idx] = arr[min_idx],arr[i]
+
+# example usage
+arr = [29, 10, 14, 37, 13]
+selection_sort(arr)
+print(arr)    
+
+
+#recursion 
+def factorial(n):
+    if n == 0 :
+        return 1
+    else:
+        return n * factorial(n-1)
+# Example usage
+print(factorial(5))
+
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
