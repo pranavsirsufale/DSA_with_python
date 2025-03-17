@@ -23,3 +23,11 @@ def dijkstra(graph,start):
     return distances
 
 
+# example graph ( Adjacency List )
+graph = {
+    "A":[("B",4), ("C",1)],
+    "B":[('C',2)],
+    "C":[]
+}
+
+print(dijkstra(graph,'A'))
