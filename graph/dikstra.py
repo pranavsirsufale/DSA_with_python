@@ -30,4 +30,5 @@ graph = {
     "C":[]
 }
 
-print(dijkstra(graph,'A'))
+print(dijkstra(graph,'A'
+))
